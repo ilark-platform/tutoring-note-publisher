@@ -1,0 +1,26 @@
+{
+  "name": "tutoring-note-publisher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilark-platform/tutoring-note-publisher"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilark-platform/tutoring-note-publisher/issues"
+  },
+  "homepage": "github.com/ilark-platform/tutoring-note-publisher#readme",
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "esm": "^3.2.25",
+    "fs": "0.0.1-security",
+    "jsdom": "^16.7.0"
+  }
+}

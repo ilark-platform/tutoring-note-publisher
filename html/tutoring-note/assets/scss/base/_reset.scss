@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NotoSansCJKkr';
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+address, html, body, button, dl, dt, dd, 
+div, em, fieldset, form, li, ol, p, span, td, th, ul, i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+article, aside, dialog, figure, footer, header, hgroup, nav, section, main {
+  display: block;
+}
+html {
+  /*font-size: 62.5%;*/
+  background-color: #ffffff;
+  /*height: calc(var(--vh, 1vh) * 100);*/
+  /*height: -webkit-fill-available;*/
+  height: 100%;
+}
+body {
+  font-family: 'NotoSansCJKkr';
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.019rem;
+  color: #242424;
+  max-width: 100%;
+  /*height: calc(var(--vh, 1vh) * 100);*/
+  height: 100%;
+  /*min-height: 100vh;*/
+  /*min-height: -webkit-fill-available;*/
+  margin: 0 auto;
+  background-color: #ffffff;
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+body.overflow-hidden {
+  height: 100%;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+em, i {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed; 
+  width:100%;
+}
+legend {
+  display: none;
+  font-size: 0;
+  outline: 0;
+}
+fieldset {
+  min-width: 0;
+  outline: 0;
+}
+input,
+select,
+textarea,
+button {
+  font-family: 'NotoSansCJKkr';
+  margin: 0;
+  border-width: 0;
+  background: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input,
+textarea {
+  &::placeholder {
+    color: rgba(0,0,0,0.3);
+  }
+}
+input:focus {
+  outline: none;
+}
+input[type=date] {
+  &::-webkit-calendar-picker-indicator { 
+    display: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+  }
+}
+.input-date-wave {
+  display: inline-block;
+  width: 16px;
+  color: #999;
+  text-align: center;
+}
+
+/*
+input[type=number] {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+  }
+}
+
+.font-archivo {
+  font-family: 'Archivo';
+}
+.font-notosans {
+  font-family: 'NotoSansCJKkr';
+}
+*/
