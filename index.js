@@ -1,9 +1,7 @@
 const fs = require('fs')
 const jsdom = require('jsdom')
 const { JSDOM } = jsdom
-const dayjs = require('dayjs')
-const publishDir = './html/'
-const menuDir = fs.readdirSync(publishDir)
+const publishDir = './html/tutoring-note'
 const htmlFiles = []
 
 const template = fs.readFileSync('./template.html')
@@ -13,20 +11,30 @@ const document = dom.window.document
 const table = document.querySelector('.list-index')
 const tbody = table.querySelector('tbody')
 
-for(let i =0; i < menuDir.length; i++){
-    let dir = `${publishDir}${menuDir[i]}/`
-    let fileList = fs.readdirSync(dir).filter(chk => {
-        return chk.match(/.+\.html$/)
-    }).map(fileName => {
-        return {
-            fileName : fileName,
-            dir : dir,
-            menuDir : menuDir[i],
-            info : fs.statSync(`${dir}${fileName}`)
-        }
-    })
-    if(fileList.length > 0) htmlFiles.push(fileList)
+const inspectionFindFile = (destPath) => {
+    try {
+        fs.readdirSync(destPath, { withFileTypes: true })
+            .forEach((file) => {
+                const path = `${destPath}/${file.name}`;
+
+                if (file.isDirectory()) {
+                    inspectionFindFile(path);
+                } else {
+                    console.log(path, file.name)
+                    htmlFiles.push({
+                        menuDir: destPath?.split('/').reverse()[0] ?? destPath,
+                        fileFullPath: path,
+                        fileName: file.name
+                    })
+                }
+            });
+    } catch(err) {
+        return console.error('Read Error', err);
+    }
 }
+
+// 예시 경로입니다.
+inspectionFindFile(publishDir);
 
 function td (content) {
     const td = document.createElement('td')
@@ -35,28 +43,19 @@ function td (content) {
     }
     return td
 }
+htmlFiles.forEach(itemInfo => {
+    console.log(itemInfo)
+    const tr = document.createElement('tr')
 
-htmlFiles.forEach(menu => {
-    menu.forEach(itemInfo => {
-        console.log(itemInfo)
-        const tr = document.createElement('tr')
+    const filename = td()
+    const anchor = document.createElement('a')
+    anchor.innerHTML = itemInfo.fileName
+    anchor.setAttribute('href', itemInfo.fileFullPath)
+    filename.appendChild(anchor)
+    tr.appendChild(td(itemInfo.menuDir))
+    tr.appendChild(filename)
 
-        const filename = td()
-        const anchor = document.createElement('a')
-        anchor.innerHTML = itemInfo.fileName
-        anchor.setAttribute('href', `${itemInfo.dir}${itemInfo.fileName}`)
-        filename.appendChild(anchor)
-
-        const format = 'YYYY/MM/DD hh:mm'
-
-        tr.appendChild(td(itemInfo.menuDir))
-        tr.appendChild(filename)
-        tr.appendChild(td( dayjs(itemInfo.ctime).format(format) ))
-        tr.appendChild(td( dayjs(itemInfo.mtime).format(format) ))
-        tr.appendChild(td( dayjs(itemInfo.birthtime).format(format) ))
-
-        tbody.appendChild(tr)
-    })
+    tbody.appendChild(tr)
 })
 
 

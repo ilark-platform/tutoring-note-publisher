@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>과외 생성</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">과외 생성</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content pb12">
+                <div class="section pb6">
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">파트너 사업자</span>
+                        <div class="flex-wrap__cont">
+                            <div class="select-dropdown select-dropdown--full">
+                                <div class="select-dropdown__inner">
+                                    <div class="select-dropdown__arrow"></div>
+                                    <div class="select-dropdown__label">
+                                        <span>파트너 사업자 1</span>
+                                    </div>
+                                    <ul class="select-dropdown__list">
+                                        <li class="select-dropdown__item">파트너 사업자 1</li>
+                                        <li class="select-dropdown__item">파트너 사업자 2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">학부모 연락처 <em class="color-red">*</em></span>
+                        <div class="flex-wrap__cont mb5">
+                            <button type="button" class="btn btn--small btn--round btn--bordered-primary" data-target="bottomSheet_1" data-toggle="bottom-sheet">+ 추가</button>
+                        </div>
+                        <div class="parents-list">
+                            <div class="parents-list__item">
+                                <div class="button-dropdown">
+                                    <div class="button-dropdown__inner">
+                                        <div class="button-dropdown__label">
+                                            <i class="icon i-more"></i>
+                                        </div>
+                                        <ul class="button-dropdown__list">
+                                            <li class="button-dropdown__item" data-target="bottomSheet_1" data-toggle="bottom-sheet">변경</li>
+                                            <li class="button-dropdown__item">삭제</li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                                <div class="parents-list__body">
+                                    <i class="icon i-parents"></i>
+                                    <h5 class="parents-list__title"><b>김진수(고2)</b> 학부모</h5> 
+                                    <p class="parents-list__phone">010-1234-5678</p>                                
+                                </div>                                
+                            </div>
+                            <div class="parents-list__item">
+                                <div class="button-dropdown">
+                                    <div class="button-dropdown__inner">
+                                        <div class="button-dropdown__label">
+                                            <i class="icon i-more"></i>
+                                        </div>
+                                        <ul class="button-dropdown__list">
+                                            <li class="button-dropdown__item" data-target="bottomSheet_1" data-toggle="bottom-sheet">변경</li>
+                                            <li class="button-dropdown__item">삭제</li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                                <div class="parents-list__body">
+                                    <i class="icon i-parents"></i>
+                                    <h5 class="parents-list__title"><b>김진수(고2)</b> 학부모</h5> 
+                                    <p class="parents-list__phone">010-1234-5678</p>                                
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap pb6">
+                        <span class="flex-wrap__title">지역 <em class="color-red">*</em></span>
+                        <div class="flex-wrap__cont">
+                            <div class="field-group">
+                                <label for="" class="field-group__label field-group__label--blind">지역</label>
+                                <div class="field-group__cont">
+                                    <i class="icon i-search"></i>
+                                    <input type="text" name="" id="" class="field-group__input" placeholder="동으로 검색">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="flex-wrap pb6">
+                        <span class="flex-wrap__title">과목 <em class="color-red">*</em></span>
+                        <div class="flex-wrap__cont">
+                            <div class="check-chip">
+                                <div class="check-chip__item">
+                                    <label for="chips1" class="check-chip__label">
+                                        <input type="checkbox" id="chips1">
+                                        <div class="check-chip__title"><span>국어</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <label for="chips2" class="check-chip__label">
+                                        <input type="checkbox" id="chips2">
+                                        <div class="check-chip__title"><span>수학</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <label for="chips3" class="check-chip__label">
+                                        <input type="checkbox" id="chips3">
+                                        <div class="check-chip__title"><span>영어</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <label class="check-chip__label">
+                                        <input type="checkbox">
+                                        <div class="check-chip__title"><span>사탐</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <label class="check-chip__label">
+                                        <input type="checkbox">
+                                        <div class="check-chip__title"><span>과탐</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <button type="button" class="check-chip__title" data-target="bottomSheet_2" data-toggle="bottom-sheet"><i class="icon i-edit"></i> 직접입력</button>                                  
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="flex-wrap flex-wrap--direction-row">
+                        <div class="flex-wrap flex-wrap--grow-1">
+                            <span class="flex-wrap__title">횟수 <em class="color-red">*</em></span>
+                            <div class="flex-wrap__cont">
+                                <div class="select-dropdown select-dropdown--full">
+                                    <div class="select-dropdown__inner">
+                                        <div class="select-dropdown__arrow"></div>
+                                        <div class="select-dropdown__label">
+                                            <span>1회</span>
+                                        </div>
+                                        <ul class="select-dropdown__list">
+                                            <li class="select-dropdown__item">1회</li>
+                                            <li class="select-dropdown__item">2회</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-wrap flex-wrap--grow-1">
+                            <span class="flex-wrap__title">회당 수업 시간 <em class="color-red">*</em></span>
+                            <div class="flex-wrap__cont">
+                                <div class="select-dropdown select-dropdown--full">
+                                    <div class="select-dropdown__inner">
+                                        <div class="select-dropdown__arrow"></div>
+                                        <div class="select-dropdown__label">
+                                            <span>1시간</span>
+                                        </div>
+                                        <ul class="select-dropdown__list">
+                                            <li class="select-dropdown__item">1시간</li>
+                                            <li class="select-dropdown__item">2시간</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap pb6">
+                        <span class="flex-wrap__title">총 수업 시간</span>
+                        <div class="flex-wrap__cont">
+                            <div class="field-group">
+                                <label for="total-time" class="field-group__label field-group__label--blind">총 수업 시간</label>
+                                <div class="field-group__cont field-group__cont--disabled">
+                                    <input type="text" name="total-time" id="total-time" value="16시간" class="field-group__input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">요일 및 시간 <em class="color-red">*</em></span>
+                        <div class="flex-wrap__cont">
+                            <div class="week-time">
+                                <div class="week-time__nav">
+                                    <button class="week-time__daybtn" data-day="월">월</button>
+                                    <button class="week-time__daybtn" data-day="화">화</button>
+                                    <button class="week-time__daybtn" data-day="수">수</button>
+                                    <button class="week-time__daybtn" data-day="목">목</button>
+                                    <button class="week-time__daybtn" data-day="금">금</button>
+                                    <button class="week-time__daybtn" data-day="토">토</button>
+                                    <button class="week-time__daybtn" data-day="일">일</button>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">시작일 <em class="color-red">*</em></span>
+                        <div class="flex-wrap__cont">
+                            <div class="field-group">
+                                <label for="" class="field-group__label field-group__label--blind">시작일</label>
+                                <div class="field-group__cont">
+                                    <input type="date" name="" id="" class="field-group__input" placeholder="날짜를 선택해주세요.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">예상 종료일</span>
+                        <div class="flex-wrap__cont">
+                            <div class="field-group">
+                                <label for="" class="field-group__label field-group__label--blind">예상 종료일</label>
+                                <div class="field-group__cont field-group__cont--disabled">
+                                    <input type="date" name="" id="" class="field-group__input" value="2024-07-08" placeholder="날짜를 선택해주세요.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-button-wrap py10">
+                        <button type="button" class="btn btn--full btn--gray">취소</button>     
+                        <button type="button" class="btn btn--full btn--primary">저장하기</button>     
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="bottomSheet_1" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                학부모 연락처 추가
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="msg-ly">
+                    <div class="msg-ly__text">
+                        <ul class="msg-ly__ul">
+                            <li>과외 생성시 학부모 휴대폰번호로 과외노트 알림톡이 전송됩니다.</li>
+                            <li>학부모님이 앱 로그인 시 선생님의 프로필과 해당 과외 정보를 확인할 수 있습니다. (보고서는 확인 불가)</li>
+                            <li>학부모 휴대폰번호는 보고서 전송 시 사용됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field-group field-group2--no-border">
+                    <label for=""" class="field-group__label field-group__label--blind">학생 이름</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="* 학생 이름 입력">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="" class="field-group__label field-group__label--blind">학년</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="* 학년 입력 (예시. 고2)">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="" class="field-group__label field-group__label--blind">학부모 휴대폰번호</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="* 학부모 휴대폰번호 입력(숫자만 입력)">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                </div>              
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+    <div id="bottomSheet_2" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                직접입력
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group">
+                    <label for="" class="field-group__label field-group__label--blind">과목</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="과목 입력">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                    <span class="field-group__check-characters"><em>0</em> / 12자</span>
+                </div>              
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.week-time__daybtn');
+        const weekTimeContainer = document.querySelector('.week-time');
+        const dayOrder = ['월', '화', '수', '목', '금', '토', '일'];
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const day = this.getAttribute('data-day');
+                const existingItem = document.querySelector(`.week-time__item[data-day="${day}"]`);
+                
+                if (existingItem) {
+                    weekTimeContainer.removeChild(existingItem);
+                    this.classList.remove('active');
+                } else {
+                    const item = document.createElement('div');
+                    item.className = 'week-time__item';
+                    item.setAttribute('data-day', day);
+                    item.innerHTML = `
+                        <div class="week-time__title">${day}</div>
+                        <div class="week-time__field">
+                            <div>
+                                <label class="week-time__label">시작 시간</label>
+                                <input type="time" class="week-time__input">
+                            </div>
+                            <em>~</em>
+                            <div>
+                                <label class="week-time__label">종료 시간</label>
+                                <input type="time" class="week-time__input week-time__input--disabled">
+                            </div>
+                        </div>
+                    `;
+                    
+                    const insertIndex = dayOrder.indexOf(day);
+                    let inserted = false;
+    
+                    weekTimeContainer.querySelectorAll('.week-time__item').forEach(existingItem => {
+                        const existingDay = existingItem.getAttribute('data-day');
+                        if (dayOrder.indexOf(existingDay) > insertIndex && !inserted) {
+                            weekTimeContainer.insertBefore(item, existingItem);
+                            inserted = true;
+                        }
+                    });
+    
+                    if (!inserted) {
+                        weekTimeContainer.appendChild(item);
+                    }
+    
+                    this.classList.add('active');
+                }
+            });
+        });
+    
+        // 페이지 로드 시 이미 active 클래스가 있는 버튼에 대한 처리를 추가
+        buttons.forEach(button => {
+            if (button.classList.contains('active')) {
+                const day = button.getAttribute('data-day');
+                const existingItem = document.querySelector(`.week-time__item[data-day="${day}"]`);
+                
+                if (!existingItem) {
+                    const item = document.createElement('div');
+                    item.className = 'week-time__item';
+                    item.setAttribute('data-day', day);
+                    item.innerHTML = `
+                        <div class="week-time__title">${day}</div>
+                        <div class="week-time__field">
+                            <div>
+                                <label class="week-time__label">시작 시간</label>
+                                <input type="time" class="week-time__input">
+                            </div>
+                            <em>~</em>
+                            <div>
+                                <label class="week-time__label">종료 시간</label>
+                                <input type="time" class="week-time__input week-time__input--disabled">
+                            </div>
+                        </div>
+                    `;
+                    
+                    const insertIndex = dayOrder.indexOf(day);
+                    let inserted = false;
+    
+                    weekTimeContainer.querySelectorAll('.week-time__item').forEach(existingItem => {
+                        const existingDay = existingItem.getAttribute('data-day');
+                        if (dayOrder.indexOf(existingDay) > insertIndex && !inserted) {
+                            weekTimeContainer.insertBefore(item, existingItem);
+                            inserted = true;
+                        }
+                    });
+    
+                    if (!inserted) {
+                        weekTimeContainer.appendChild(item);
+                    }
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</body>
+</html>

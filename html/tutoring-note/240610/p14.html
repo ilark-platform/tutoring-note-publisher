@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>과외 요청</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">과외 요청</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content pb12">
+                <div class="section pb6">
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">파트너 선생님</span>
+                        <div class="flex-wrap__cont">
+                            <p class="flex-wrap__text">파트너 선생님 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">학부모 연락처</span>
+                        <div class="parents-list">
+                            <div class="parents-list__item">
+                                <div class="parents-list__body">
+                                    <i class="icon i-parents"></i>
+                                    <h5 class="parents-list__title"><b>김진수(고2)</b> 학부모</h5> 
+                                    <p class="parents-list__phone">010-1234-5678</p>                                
+                                </div>                                
+                            </div>
+                            <div class="parents-list__item">
+                                <div class="parents-list__body">
+                                    <i class="icon i-parents"></i>
+                                    <h5 class="parents-list__title"><b>김진수(고2)</b> 학부모</h5> 
+                                    <p class="parents-list__phone">010-1234-5678</p>                                
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap pb6">
+                        <span class="flex-wrap__title">지역</span>
+                        <div class="flex-wrap__cont">
+                            <p class="flex-wrap__text">인천광역시 부평구 부개동</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">과목</span>
+                        <div class="flex-wrap__cont">
+                            <div class="check-chip">
+                                <div class="check-chip__item">
+                                    <label for="chips1" class="check-chip__label">
+                                        <input type="checkbox" id="chips1" checked disabled>
+                                        <div class="check-chip__title"><span>국어</span></div>
+                                    </label>                                    
+                                </div>
+                                <div class="check-chip__item">
+                                    <label for="chips2" class="check-chip__label">
+                                        <input type="checkbox" id="chips2" checked disabled>
+                                        <div class="check-chip__title"><span>수학</span></div>
+                                    </label>                                    
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap pb6">
+                        <div class="class-summary">
+                            <div class="class-summary__item">
+                                <div class="class-summary__info"><b>8</b> 회</div>
+                                <div class="class-summary__title">횟수</div>
+                            </div>
+                            <div class="class-summary__item">
+                                <div class="class-summary__info"><b>2</b> 시간</div>
+                                <div class="class-summary__title">회당 수업 시간</div>
+                            </div>
+                            <div class="class-summary__item">
+                                <div class="class-summary__info"><b>16</b> 시간</div>
+                                <div class="class-summary__title">총 수업 시간</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="flex-wrap">
+                        <span class="flex-wrap__title">요일 및 시간</span>
+                        <div class="flex-wrap__cont">
+                            <ul class="tutoring-schedule tutoring-schedule--large">
+                                <li class="tutoring-schedule__item"><b>월</b> 오후 3:00 ~ 오후 4:00</li>
+                                <li class="tutoring-schedule__item"><b>수</b> 오후 3:00 ~ 오후 4:00</li>
+                                <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex-wrap flex-wrap--direction-row">
+                        <div class="flex-wrap flex-wrap--grow-1">
+                            <span class="flex-wrap__title">시작일</span>
+                            <div class="flex-wrap__cont">
+                                <p class="flex-wrap__text"><i class="icon i-date"></i> 2024.3.16(월)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-wrap flex-wrap--grow-1">
+                            <span class="flex-wrap__title">예상 종료일</span>
+                            <div class="flex-wrap__cont">
+                                <p class="flex-wrap__text"><i class="icon i-date"></i> 2024.3.16(월)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-button-wrap py10">
+                        <button type="button" class="btn btn--full btn--bordered-primary" data-target="alertModal_1" data-toggle="modal">거절</button>     
+                        <button type="button" class="btn btn--full btn--primary"  data-target="alertModal_2" data-toggle="modal">승인</button>     
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="alertModal_1" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                승인 거절
+                <p class="modal__description">거절 시 요청한 사업자에게 거절 안내 푸시가 전송됩니다. 거절 하시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="btn btn--small btn--full btn--primary" data-dismiss="modal">승인 거절</button>
+                <button type="button" class="btn btn--small btn--full" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+    <div id="alertModal_2" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                승인 완료
+                <p class="modal__description">승인시 요청한 사업자에게 승인 안내 푸시가 전송됩니다. 승인 하시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="btn btn--small btn--full btn--primary" data-dismiss="modal">승인 완료</button>
+                <button type="button" class="btn btn--small btn--full" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+</body>
+</body>
+</html>
