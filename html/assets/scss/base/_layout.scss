@@ -30,10 +30,15 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $color-gray-100;
+
+  &--grow0 {
+    flex-grow: 0;
+  }
 }
 
 .content {
-  padding-bottom: 6.75rem;;
+  padding-bottom: 6.75rem;
+  //padding-bottom: 3.375rem;
 }
 
 
@@ -132,7 +137,7 @@
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
-    color: $color-gray-600;
+    color: $color-gray-700;
     text-decoration: none;
 
     &::after {
@@ -185,7 +190,7 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		font-size: .625rem;		
+		font-size: .6875rem;		
     font-weight: 500;
 		opacity: .4;
 	}
@@ -221,17 +226,39 @@
 
 /* ------------------------------ COMMON ------------------------------ */
 .color-primary, .highlight {
-  color: $color-primary;
+  color: #f66217;
 }
+
 .color-red {
-  color: $color-red;
+  color: #f41e1e;
 }
-.small {
-  font-size: .75em;
+
+.color-gray-700 {
+  color: #b6b6b6;
+}
+
+.typo-small {
+  font-size: 0.875em;
+}
+
+.typo-small2 {
+  font-size: 0.8125em;
+}
+
+.typo-medium {
+  font-size: 1rem;
+}
+
+.typo-large {
+  font-size: 1.125rem;
 }
 
 .strong {
   font-weight: 700;
+}
+
+.bg-white {
+  background-color: $color-white;
 }
 
 //단락 나눔
@@ -310,13 +337,27 @@
   border-top: .0625rem solid $color-white;
   
   &__title {
-    font-size: 1.125rem;
+    font-size: 1.063rem;
     font-weight: 700;
     line-height: 1.5rem;
     color: $color-black-100;
     margin: 0 -1rem;
     padding: 1.25rem 1rem 0 1rem;
     background-color: $color-white;
+  }
+}
+
+.bottom-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .625rem;
+  margin: 0 -1rem;
+  padding: .875rem 1rem 0;
+  background-color: $color-white;
+
+  & button {
+
   }
 }
 
@@ -358,7 +399,7 @@
     background-image: icon(close);
 	}
   &.i-info {
-    @include size(20px, 20px);
+    @include size(16px, 16px);
     background-image: icon(info);
 	}
   &.i-alarm {
@@ -384,6 +425,36 @@
   &.i-setting {
     background-image: icon(setting);
   }
+  &.i-search {
+    @include size(20px, 20px);
+    background-image: icon(search);
+    margin-left: .5rem;
+  }
+  &.i-trash {
+    @include size(22px, 22px);
+    background-image: icon(trash, 'b6b6b6');
+  }
+  &.i-refresh {
+    @include size(22px, 22px);
+    background-image: icon(refresh);
+    transform: scaleX(-1);
+  }
+  &.i-check {
+    @include size(20px, 20px);
+    background-image: icon(check, 'f66217');
+  }
+  &.i-edit {
+    @include size(18px, 18px);
+    background-image: icon(edit);
+  }
+  &.i-date {
+    background-image: icon(date);
+  }
+  &.i-time {
+    background-image: icon(time);
+  }
+
+
 
   &.i-ft-tutoring {
     @include size(28px, 28px);
@@ -419,6 +490,15 @@
     background-image: icon(class-report);
   }
 
+  &.i-parents {
+    @include size(38px, 38px);
+    background-image: icon(parents , 'dbdbdb');
+  }
+
+
+
+
+
 
 
 
@@ -449,10 +529,6 @@
   &.cscenter {
     @include size(18px, $height: 18px);
 		background-image: icon(cscenter2);
-  }
-  &.time {
-    @include size(14px, $height: 14px);
-		background-image: icon(time);
   }
   &.archive-save {
     @include size(16px, $height: 16px);
@@ -489,79 +565,6 @@
 
 
 
-
-/* ------------------------------ SIDEBAR MENU ------------------------------ */
-.dim-layer {
-  @include position(fixed, $top: 0, $left: 0);
-  @include size($width: 100vw, $height: 100vh);
-  display: none;
-  background-color: rgba(0,0,0,.7);
-  animation: fade 0.5s;
-  z-index: 199;
-  
-  &.is-active {
-    display: block;
-  }
-}
-
-.sidebar {
-  @include position(fixed, $top: 0, $right: 0);
-  height: 100vh;
-  min-height: 100vh;
-  width: 84%;
-  max-width: 300px;
-  background-color: #17171b;
-  transition: all .3s ease-in-out;
-  transform: translate(100%, 0px);
-  z-index: 200;
-
-  &.is-active {
-    transition: all .3s ease-in-out;
-    transition-delay: .3s;
-    transform: translate(0%, 0px);
-    box-shadow: $box-shadow;
-  }  
-
-  &__close {
-    @include position(absolute, $top: 1rem, $right: 2rem);
-    cursor: pointer;
-    z-index: 3;
-  }
-
-  &__wrapper {
-    @include size(100%, $height: 100%);
-    padding-bottom: 6.8rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    @include size(100%, $height: 48px);
-    background-color: #17171b;
-  }
-
-  .global-nav {
-    min-height: 560px;
-
-    &__list {
-      padding: 0 2rem 2rem;
-    }
-  }
-
-  &__footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    @include size(100%, $height: 48px);
-    margin-top: 2rem;
-    padding: 0 3rem;
-    z-index: 2;   
-  }
-}
 
 
 

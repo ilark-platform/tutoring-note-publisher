@@ -41,7 +41,6 @@ body {
   overflow-x: hidden;
 }
 body.overflow-hidden {
-  height: 100%;
   overflow: hidden;
 }
 ul {
@@ -88,6 +87,67 @@ textarea {
 input:focus {
   outline: none;
 }
+
+input[type="date"] {
+  position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23242424' viewBox='0 -960 960 960'%3E%3Cpath d='M320-404.62q-12.38 0-21.58-9.19-9.19-9.19-9.19-21.57 0-12.39 9.19-21.58 9.2-9.19 21.58-9.19 12.38 0 21.58 9.19 9.19 9.19 9.19 21.58 0 12.38-9.19 21.57-9.2 9.19-21.58 9.19Zm160 0q-12.38 0-21.58-9.19-9.19-9.19-9.19-21.57 0-12.39 9.19-21.58 9.2-9.19 21.58-9.19 12.38 0 21.58 9.19 9.19 9.19 9.19 21.58 0 12.38-9.19 21.57-9.2 9.19-21.58 9.19Zm160 0q-12.38 0-21.58-9.19-9.19-9.19-9.19-21.57 0-12.39 9.19-21.58 9.2-9.19 21.58-9.19 12.38 0 21.58 9.19 9.19 9.19 9.19 21.58 0 12.38-9.19 21.57-9.2 9.19-21.58 9.19ZM224.62-120q-27.62 0-46.12-18.5Q160-157 160-184.62v-510.76q0-27.62 18.5-46.12Q197-760 224.62-760h70.76v-89.23h43.08V-760h286.16v-89.23h40V-760h70.76q27.62 0 46.12 18.5Q800-723 800-695.38v510.76q0 27.62-18.5 46.12Q763-120 735.38-120H224.62Zm0-40h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-350.76H200v350.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69ZM200-575.39h560v-119.99q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v119.99Zm0 0V-720v144.61Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute; // 이를 설정하기 위해 사전에 relative를 설정한 것이다.
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; // 배경은 투명하게,
+    color: transparent; // 글자도 투명하게! 이 두 설정을 통해 캘린더 아이콘을 사라지게 만든다.
+    cursor: pointer;
+  }
+
+  &::before {
+    content: attr(placeholder); // input 태그의 placeholder라는 속성값을 가져와서 content로 사용한다. 보통은 placeholder보다는 data-placeholder라는 커스텀 속성을 만들어서 사용하시는 것 같다.
+    width: 100%;
+    height: 100%;
+  }
+
+  &:valid::before {
+    display: none; // 유효값이 입력된 경우 before에 있는 것을 사라지게 한다. 즉, placeholder를 사라지게 한다.
+  }
+}
+
+input[type="time"] {
+  position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%242424' viewBox='0 -960 960 960'%3E%3Cpath d='m625.85-305.85 28.3-28.3L500-488.33V-680h-40v208.31l165.85 165.84ZM480.13-120q-74.67 0-140.41-28.34-65.73-28.34-114.36-76.92-48.63-48.58-76.99-114.26Q120-405.19 120-479.87q0-74.67 28.34-140.41 28.34-65.73 76.92-114.36 48.58-48.63 114.26-76.99Q405.19-840 479.87-840q74.67 0 140.41 28.34 65.73 28.34 114.36 76.92 48.63 48.58 76.99 114.26Q840-554.81 840-480.13q0 74.67-28.34 140.41-28.34 65.73-76.92 114.36-48.58 48.63-114.26 76.99Q554.81-120 480.13-120ZM480-480Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute; // 이를 설정하기 위해 사전에 relative를 설정한 것이다.
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; // 배경은 투명하게,
+    color: transparent; // 글자도 투명하게! 이 두 설정을 통해 캘린더 아이콘을 사라지게 만든다.
+    cursor: pointer;
+  }
+
+  &::before {
+    content: attr(placeholder); // input 태그의 placeholder라는 속성값을 가져와서 content로 사용한다. 보통은 placeholder보다는 data-placeholder라는 커스텀 속성을 만들어서 사용하시는 것 같다.
+    width: 100%;
+    height: 100%;
+  }
+
+  &:valid::before {
+    display: none; // 유효값이 입력된 경우 before에 있는 것을 사라지게 한다. 즉, placeholder를 사라지게 한다.
+  }
+}
+
+
+/*
 input[type=date] {
   &::-webkit-calendar-picker-indicator { 
     display: none; 
@@ -95,6 +155,12 @@ input[type=date] {
     appearance: none;
   }
 }
+input[type=time] {
+  &::-webkit-calendar-picker-indicator {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%343434' viewBox='0 -960 960 960'%3E%3Cpath d='m625.85-305.85 28.3-28.3L500-488.33V-680h-40v208.31l165.85 165.84ZM480.13-120q-74.67 0-140.41-28.34-65.73-28.34-114.36-76.92-48.63-48.58-76.99-114.26Q120-405.19 120-479.87q0-74.67 28.34-140.41 28.34-65.73 76.92-114.36 48.58-48.63 114.26-76.99Q405.19-840 479.87-840q74.67 0 140.41 28.34 65.73 28.34 114.36 76.92 48.63 48.58 76.99 114.26Q840-554.81 840-480.13q0 74.67-28.34 140.41-28.34 65.73-76.92 114.36-48.58 48.63-114.26 76.99Q554.81-120 480.13-120ZM480-480Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z'/%3E%3C/svg%3E");
+  }
+}
+*/
 .input-date-wave {
   display: inline-block;
   width: 16px;
