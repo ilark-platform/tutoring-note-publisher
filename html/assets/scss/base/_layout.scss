@@ -8,6 +8,12 @@
   flex-direction: column;
   //justify-content: space-between;
   min-height: 100%;
+  opacity: 1;
+            transition: opacity 0.5s ease;
+}
+
+#app.hidden {
+  opacity: 0;
 }
 
 #app-body {
@@ -33,6 +39,10 @@
 
   &--grow0 {
     flex-grow: 0;
+  }
+
+  &--bg-white {
+    background-color: $color-white;
   }
 }
 
@@ -237,6 +247,10 @@
   color: #b6b6b6;
 }
 
+.color-black {
+  color: #242424;
+}
+
 .typo-small {
   font-size: 0.875em;
 }
@@ -255,6 +269,14 @@
 
 .strong {
   font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .bg-white {
@@ -394,13 +416,15 @@
   &.i-arrow-back {
     background-image: icon(arrow-back);
 	}
-
   &.i-close {
     background-image: icon(close);
 	}
+  &.i-close-white {
+    background-image: icon(close, 'ffffff');
+	}
   &.i-info {
-    @include size(16px, 16px);
-    background-image: icon(info);
+    @include size(18px, 18px);
+    background-image: icon(info-fill, '484848');
 	}
   &.i-alarm {
     position: relative;
@@ -452,6 +476,14 @@
   }
   &.i-time {
     background-image: icon(time);
+  }
+  &.i-photo {
+    @include size(20px, 20px);
+    background-image: icon(photo);
+  }
+  &.i-add-circle {
+    @include size(34px, 34px);
+    background-image: icon(add-circle, 'f66217');
   }
 
 

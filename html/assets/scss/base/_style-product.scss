@@ -13,9 +13,13 @@
 
 .msg-ly {
   display: flex;
-  padding: .5rem;
+  padding: .875rem;
   background-color: $color-gray-100;
   border-radius: $border-radius;
+
+  &--primary-bg {
+    background-color: rgba($color-blue, 0.08);
+  }
 
   &--expansion {
     color: $color-gray-700;
@@ -41,11 +45,12 @@
   &__ul {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .25rem;
 
     li {
       position: relative;
       padding-left: 1rem;
+      color: $color-black-400;
 
       &::before {
         position: absolute;
@@ -64,11 +69,18 @@
 }
 
 .page-empty {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @include position(absolute, 0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: $color-gray-700;
+  text-align: center;
+
+  &--base {
+    margin-top: -3.625rem;
+  }
+
 }
 
 .status-info {
@@ -142,6 +154,10 @@
     background-image: icon(arrow-right, 'f66217');
   }
 
+  &--gray {
+    color: $color-gray-700;
+  }
+
   &--large {
     font-size: 1rem;
   }
@@ -151,6 +167,21 @@
     color: $color-gray-700;
     border-bottom: 1px solid $color-gray-700;
   }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 1.25rem;
+  font-size: .75rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0 .5rem;
+  color: $color-gray-700;
+  background-color: $color-gray-100;
+  border: .0625rem solid $color-gray-500;
+  border-radius: 1.25rem;
 }
 
 .chips {
@@ -790,6 +821,261 @@
 }
 
 
+/* ------------------------------ 프로필 리스트/등록/수정 ------------------------------ */
+.profile-photo {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  margin: 2rem auto 1rem;
+
+  &__form {
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    z-index: 5;
+  }
+
+  &__input-file {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    z-index: -1;
+
+    & + label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: $color-white;
+      border-radius: 50%;
+
+      &::before {
+        @include position(absolute, $top: -2px, $right: -2px);
+        content: '*';
+        color: $color-primary;
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__image-preview {
+    @include position(absolute, $top: 0, $left: 0, $right: 0);
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &__img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;    
+  }
+
+  &__del {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;    
+    background-color: $color-white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    &.show {
+      display: block;
+    }
+
+    & .i-close {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+}
+
+.profile-group {
+  position: relative;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  background-color: $color-white;
+  border-top: .0625rem solid $color-gray-200;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .625rem;
+  }
+  
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.063rem;
+    font-weight: 600;
+    color: $color-black-100;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    a, button {
+      font-size: .875rem;
+      font-weight: 500;
+      padding: .25rem 0;
+      text-decoration: none;
+    }
+
+    .pf-modify {
+      color: $color-blue;      
+    }
+
+    .pf-add {
+      color: $color-primary;      
+    }
+  }
+
+  &__cont {
+    position: relative;
+  }
+
+  &__text {
+    display: flex;
+    align-items: flex-start;
+    font-size: .9375rem;
+    color: $color-gray-900;
+
+    & ~ & {
+      margin-top: 1rem;
+    }
+
+    & > div {
+      flex: 1 1 0;
+    }
+
+    & p b {
+      font-weight: 500;
+      color: $color-black-100;
+    }
+  }
+
+  &__certify {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .5rem;
+
+    .chips {
+      &__item {
+        background-color: $color-black-300;
+        color: $color-white;
+        margin-right: 0;
+      }
+    }
+
+    .btn {
+      width: fit-content;
+      height: 1.75rem;
+      font-size: .75rem;
+    }
+  }
+}
+
+.regi-image {
+  padding: .5rem 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+    width: calc(((100% - 2rem) / 3) + .25rem);
+    background-color: $color-white;
+    
+    &::before {
+      display: block;
+      content: '';
+      padding-bottom: 100%;
+    }
+
+    img {
+      @include position(absolute, $top: 0, $left: 0, $right: 0, $bottom: 0);
+      @include size(100%, 100%); 
+      object-fit: cover; 
+      border-radius: .375rem;
+      overflow: hidden;
+    }
+
+    .btn-delete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include position(absolute, $top: 4px, $right: 4px);
+      @include size(22px, $height: 22px);
+      border-radius: 50%;
+      background-color: $color-black-300;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 2;
+      
+      i {
+        @include size(12px, 12px);
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: .0625rem dashed #ccc;
+    border-radius: .375rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    i {
+      font-size: 3rem;
+      color: $color-primary;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+
 /* ------------------------------ 페이지 헤더 ------------------------------ */
 .page-header {
   display: flex;
@@ -808,7 +1094,7 @@
 .flex-wrap {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 
   & & {
     margin-top: 0;
@@ -828,7 +1114,7 @@
     font-size: 1.063rem;
     font-weight: 600;
     color: $color-black-100;
-    margin-bottom: .625rem;
+    margin-bottom: .875rem;
   }
 
   &__cont {

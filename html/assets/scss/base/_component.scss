@@ -20,6 +20,10 @@
     justify-content: center;
   }
 
+  &--justify-between {
+    justify-content: space-between;
+  }
+
   &--justify-end {
     justify-content: flex-end;
   }
@@ -93,7 +97,7 @@
 .field-group {
   position: relative;
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   
   &--half {
     width: calc(50% - 1.2rem);
@@ -104,7 +108,7 @@
     font-size: 1.063rem;
     font-weight: 600;
     color: $color-black-100;
-    margin-bottom: .625rem;
+    margin-bottom: .875rem;
 
     &--blind {
       display: none;
@@ -129,6 +133,13 @@
     border-radius: $border-radius; 
     overflow: hidden;
     transition: all 0.3s; 
+
+    &--no-style {
+      display: block;
+      border: none;
+      border-radius: 0; 
+      overflow: visible;
+    }
     
     &--invalid {
       border-color: $color-red;
@@ -233,13 +244,14 @@
 
 .field-group2 {
   position: relative;
-  margin-top: .5rem;
+  margin-top: 1rem;
   padding: 1.25rem 1rem;
   background-color: $color-white;
   border: .0625rem solid $color-gray-300;
   border-radius: $border-radius;
 
   &--no-border {
+    margin-top: 1.75rem;
     padding: 0;
     border: none;
     border-radius: 0; 
@@ -250,7 +262,7 @@
     font-size: 1.063rem;
     font-weight: 600;
     color: $color-black-100;
-    margin-bottom: .625rem;
+    margin-bottom: .875rem;
 
     &--blind {
       display: none;
@@ -329,7 +341,7 @@
     outline: 0;
     resize: none;
     border-bottom: .0625rem solid $color-gray-400;
-    overflow: hidden;
+    overflow-y: auto;
     transition: all 0.3s; 
 
     &:focus {
@@ -344,6 +356,75 @@
   &__text {
     font-size: .9375rem;
     color: $color-gray-900;
+  }
+}
+
+
+/* ------------------------------ CUSTOM FILE UPLOAD ------------------------------ */
+.file-upload {
+  display: flex;
+  gap: .5rem;
+  padding: .5rem 0;
+
+  &__label {
+    flex-shrink: 0;
+    width: fit-content;
+    height: 48px;
+    font-size: .875rem;
+    line-height: 48px;
+    text-align: center;
+    padding: 0 1rem;
+    display: block;
+    color: $color-white;
+    background-color: $color-gray-700;
+    border-radius: $border-radius;
+    cursor: pointer;    
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__preview {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    border-bottom: .0625rem solid $color-gray-400;
+
+    div {
+      display: flex;
+      font-size: .875rem;
+      color: $color-black-100;
+      .name {
+        max-width: 18ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ext {
+        flex-shrink: 0;
+      }
+    }
+  }
+  
+  .btn-delete {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include size(22px, $height: 22px);
+    border-radius: 50%;
+    background-color: $color-black-300;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+    
+    i {
+      @include size(12px, 12px);
+    }
   }
 }
 
@@ -676,6 +757,7 @@
     background-color: $color-white;
     border-radius: $border-radius; 
     cursor: pointer;
+    padding-right: 1.5rem;
     //transition: all 0.3s;  
 
     &.expanded {
@@ -684,6 +766,7 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       box-shadow: 0 3px 5px 0 rgba($color-black, .2);
+      z-index: 10;
 
       .select-dropdown__arrow {
         margin-top: .3125rem;
@@ -830,13 +913,17 @@
 // --- button: variants ---------------------------------------------------------
 @include bem-button('primary', $button-primary-color, $color-white);
 @include bem-button('gray', $color-gray-300, $color-black-400);
+@include bem-button('gray-2', $color-gray-500, $color-black-400);
 
 // --- button: bordered ---------------------------------------------------------
 @include bem-button-bordered('base', $color-gray-500, $color-gray-700);
 @include bem-button-bordered('primary', $button-primary-color, $button-primary-color);
 //@include bem-button-bordered('black', $button-black-color, $button-black-color);
 
-
+.btn--gray:hover {
+  background-color: darken($color-gray-300, 10%);
+  border-color: darken($color-gray-300, 10%);
+}
 
 
 
@@ -844,19 +931,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: .5rem;
+
+  &__title {
+    font-size: .8125rem;
+    color: $color-gray-700;
+  }
   
   &__label {
     position: relative;
     display: inline-flex;
-    width: 60px;
-    height: 32px;
+    width: 46px;
+    height: 24px;
     padding: 2px;
 
     .switcher__input:checked + b {
       background-color: $color-primary;
     }
     .switcher__input:checked + b::before {
-      transform: translateX(28px);
+      transform: translateX(21px);
     }
   }
 
@@ -874,8 +967,8 @@
     border-radius: 50px;
 
     &::before {
-      @include position(absolute, $top: 0, $left: 0);
-      @include size($width: 28px, $height: 28px);
+      @include position(absolute, $top: -1px, $left: 0);
+      @include size($width: 22px, $height: 22px);
       content: '';      
       margin: 2px;
       background-color: $color-white;
@@ -991,6 +1084,87 @@
     &--justify-end {
       justify-content: flex-end;
     }
+  }
+}
+
+
+/* ------ MODAL DIALOG ----- */
+.modal-dialog {
+  display: none;
+  @include position(fixed, $top: 0, $left: 0, $bottom: 0, $right: 0);
+  z-index: 1000;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    transform: translate(0, 100%);
+    transition: transform 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+    &.open {
+      transform: translate(0, 0);
+    }
+  }
+
+  &__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__close {
+    @include position(absolute, $top: 1.063rem, $right: 1rem);
+    @include size(24px, 24px);
+    display: flex;
+    color: $color-black;
+    background-color: $color-white;
+    z-index: 3;
+  }
+
+  &__header {
+    flex-shrink: 0;
+    @include position(sticky, $top: 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.625rem;
+    background-color: $color-white;
+    text-align: center;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: $color-black-100;
+  }
+
+  &__body {
+    flex-grow: 1;
+    padding: 0 1rem 1.5rem;    
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  &__body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: .625rem;
+    padding: 1rem;
+    background-color: $color-white;
+    border-top: .0625rem solid $color-gray-100;
+    z-index: 2;
   }
 }
 
