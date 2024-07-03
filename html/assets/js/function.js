@@ -253,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeInputClear();
 });
 
+
 /* TEXTAREA Height Auto */
 function autoResizeTextarea() {
   const textareas = document.querySelectorAll('.js-auto-resize');

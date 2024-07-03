@@ -1,0 +1,98 @@
+<div class="modal-dialog__container">
+    <div class="modal-dialog__header">
+        <span class="modal-dialog__title">사진 및 동영상</span>
+        <button type="button" class="modal-dialog__close"><i class="icon i-close"></i></button>
+    </div>
+    <div class="modal-dialog__body">
+        <div class="field-group">
+            <label for="" class="field-group__label field-group__label--blind">유튜브 영상 URL</label>
+            <div class="field-group__cont">
+                <input type="text" name="" id="" class="field-group__input" placeholder="유튜브 영상 UR">
+                <button type="button" class="btn btn--small btn--primary mr2">등록</button>
+            </div>
+            
+        </div>
+        <div class="field-group">            
+            <div class="field-group__cont field-group__cont--no-style">
+                <div class="field-group__check-characters text-left"><span class="color-black">사진 및 동영상</span> <em>8</em> / 10</div>
+                <div class="regi-image regi-image--no-overflow">
+                    <div class="regi-image__list" id="lightgallery">
+                        <div class="regi-image__item">
+                            <label class="regi-image__label">
+                                <i class="icon i-add-circle"></i>
+                                <input type="file" class="regi-image__input">
+                            </label>
+                        </div>
+                        <a 
+                            class="regi-image__item"
+                            data-lg-size="2500-2500"
+                            data-src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                        >
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                        </a>
+                        <a 
+                            class="regi-image__item"
+                            data-lg-size="2500-2303"
+                            data-src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                        >
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                        </a>
+                        <a 
+                            class="regi-image__item"
+                            data-lg-size="1280-720"
+                            data-src="//www.youtube.com/watch?v=EIUJfXk3_3w"
+                            data-poster="https://img.youtube.com/vi/EIUJfXk3_3w/maxresdefault.jpg"
+                        >
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="https://img.youtube.com/vi/EIUJfXk3_3w/maxresdefault.jpg">
+                        </a>
+                        <a 
+                            class="regi-image__item"
+                            data-lg-size="2500-2500"
+                            data-src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                        >
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                        </a>
+                        <a 
+                            class="regi-image__item"
+                            data-lg-size="2500-2303"
+                            data-src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                        >
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="modal-dialog__footer">
+        <button type="button" class="btn btn--full btn--gray">취소</button>     
+        <button type="button" class="btn btn--full btn--primary">저장하기</button>     
+    </div>
+</div>
+<script>
+const $lgContainer = document.getElementById("lightgallery");
+
+// 첫 번째 <div> 요소를 제외한 <a> 요소들만 선택합니다.
+const aElements = $lgContainer.querySelectorAll('a');
+
+const lg = lightGallery($lgContainer, {
+    speed: 500,
+    showZoomInOutIcons: true,
+    actualSize: false,
+    plugins: [lgZoom, lgThumbnail, lgVideo],
+    selector: aElements,
+    //licenseKey: 'your_license_key' 상업적 사용시 라이센스키 등록해야됨.
+    mobileSettings: {
+    controls: true,
+    showCloseIcon: true,
+    download: true,
+    rotate: true
+    },
+});
+</script>

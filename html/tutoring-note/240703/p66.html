@@ -1,0 +1,229 @@
+<div class="modal-dialog__container">
+    <div class="modal-dialog__header">
+        <span class="modal-dialog__title">학력정보</span>
+        <button type="button" class="modal-dialog__close"><i class="icon i-close"></i></button>
+    </div>
+    <div class="modal-dialog__body">
+        <div class="search-form">
+            <div class="search-form__content">
+                <div class="field-group">
+                    <span class="field-group__label">대학(원)명 <em class="color-red">*</em></span>
+                    <div class="field-group__cont">
+                        <i class="icon i-search"></i>
+                        <div class="field-group__div-input js-overlaySearch" placeholder="대학(원)명 입력"></div>
+                    </div>
+                    <div class="overlayContainer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+            <label for="" class="field-group__label">전공 <em class="color-red">*</em></label>
+            <div class="field-group__cont field-group__cont--disabled">
+                <input type="text" name="" id="" class="field-group__input" placeholder="전공 입력" disabled>
+            </div>
+        </div>
+        <div class="field-group">
+            <span class="field-group__label">학번 <em class="color-red">*</em></span>
+            <div class="field-group__cont field-group__cont--no-style">
+                <div class="select-dropdown select-dropdown--full">
+                    <div class="select-dropdown__inner">
+                        <div class="select-dropdown__arrow"></div>
+                        <div class="select-dropdown__label">
+                            <span>선택</span>
+                        </div>
+                        <ul class="select-dropdown__list">
+                            <li class="select-dropdown__item">24학번</li>
+                            <li class="select-dropdown__item">23학번</li>
+                            <li class="select-dropdown__item">22학번</li>
+                            <li class="select-dropdown__item">21학번</li>
+                            <li class="select-dropdown__item">20학번</li>
+                            <li class="select-dropdown__item">19학번</li>
+                            <li class="select-dropdown__item">18학번</li>
+                            <li class="select-dropdown__item">17학번</li>
+                            <li class="select-dropdown__item">16학번</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+            <span class="field-group__label">재학상태 <em class="color-red">*</em></span>
+            <div class="field-group__cont field-group__cont--no-style">
+                <div class="select-dropdown select-dropdown--full">
+                    <div class="select-dropdown__inner">
+                        <div class="select-dropdown__arrow"></div>
+                        <div class="select-dropdown__label">
+                            <span>선택</span>
+                        </div>
+                        <ul class="select-dropdown__list">
+                            <li class="select-dropdown__item">재학중</li>
+                            <li class="select-dropdown__item">휴학중</li>
+                            <li class="select-dropdown__item">졸업</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="typo-medium mt6">재학/졸업 증명서 등록 (선택)</div>
+            <div class="field-group__cont field-group__cont--no-style">
+                <div class="field-group__check-characters text-left mt5"><span class="color-black">사진</span> <em>0</em> / 1</div>
+                <div class="regi-image">
+                    <div class="regi-image__list">
+                        <div class="regi-image__item">
+                            <label class="regi-image__label">
+                                <i class="icon i-add-circle"></i>
+                                <input type="file" class="regi-image__input">
+                            </label>
+                        </div>
+                        <div class="regi-image__item">
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                            <img class="thumb" src="data:image/jpeg;base64,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">        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-group__cont field-group__cont--no-style">
+                <div class="field-group__check-characters text-left mt5"><span class="color-black">문서</span> <em>0</em> / 1</div>
+                <div class="file-upload">
+                    <div id="file-preview" class="file-upload__preview">
+                        <div>
+                            <span class="name">통신판매업신고증</span>
+                            <span class="ext">.pdf</span>
+                        </div>
+                        <button type="button" class="btn-delete"><i class="icon i-close-white"></i></button>                        
+                    </div>
+                    <label for="file-upload-input" class="file-upload__label">+ 추가하기</label>
+                    <input type="file" id="file-upload-input" class="file-upload__input">
+                </div>
+            </div>
+        </div>
+        <div class="msg-ly mt5">
+            <div class="msg-ly__text">
+                <ul class="msg-ly__ul">
+                    <li>재학 상태에 맞는 서류를 등록해 주세요.</li>
+                    <li>서류를 등록하시면 파트너 사업자가 확인할 수 있으며, 필요시 사업자가 전송하는 선생님의 프로필에 서류 인증 배지를 추가할 수 있습니다.</li>
+                    <li>등록한 서류를 삭제하거나 수정할 시, 사업자가 재확인 후 서류 인증 배지를 추가할 수 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog__footer">
+        <button type="button" class="btn btn--full btn--gray">취소</button>     
+        <button type="button" class="btn btn--full btn--primary">저장하기</button>     
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.js-overlaySearch').forEach(input => {
+    input.addEventListener('click', function() {
+        const overlayContainer = this.parentElement.nextElementSibling;
+        createSearchOverlay(overlayContainer, this);
+    });
+});
+
+function createSearchOverlay(container, inputElement) {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay-search';
+    overlay.style.display = 'flex';
+    
+    const overlayContent = document.createElement('div');
+    overlayContent.className = 'overlay-search__content';
+
+    const overlayHead = document.createElement('div');
+    overlayHead.className = 'overlay-search__head';
+
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.id = 'searchInput';
+    searchInput.className = "overlay-search__input";
+    searchInput.placeholder = 'Search...';
+    
+    searchInput.value = inputElement.innerText || ''; // Initialize with the current input value, ensure it's not undefined
+    
+    const closeButton = document.createElement('button');
+    closeButton.className = 'closeButton';
+    closeButton.innerHTML = '<i class="icon i-arrow-back"></i>';
+    closeButton.addEventListener('click', function() {
+        container.removeChild(overlay);
+    });
+    
+    const directInputButton = document.createElement('button');
+    directInputButton.className = 'btn overlay-search__dirbutton';
+    directInputButton.textContent = '직접입력';
+    directInputButton.addEventListener('click', function() {
+        inputElement.innerText = searchInput.value; // Save the input value
+        container.removeChild(overlay);
+    });
+
+    overlayHead.appendChild(closeButton);
+    overlayHead.appendChild(searchInput);
+    overlayHead.appendChild(directInputButton);
+
+    const overlayBody = document.createElement('div');
+    overlayBody.className = 'overlay-search__body';
+    
+    const infoMessage = document.createElement('div');
+    infoMessage.className = 'msg-ly my4 mx4';
+    infoMessage.innerHTML = `
+        <p class="msg-ly__text color-gray-700">검색이 안될 시 직접입력이 가능합니다.<br>텍스트 입력 후 우측 상단의 직접입력 버튼을 눌러주세요.</p>
+    `;
+    
+    const resultsList = document.createElement('ul');
+    resultsList.className = 'overlay-results-list';
+    resultsList.id = 'resultsList';
+
+    overlayBody.appendChild(infoMessage);
+    overlayBody.appendChild(resultsList);
+    overlayContent.appendChild(overlayHead);
+    overlayContent.appendChild(overlayBody);
+    overlay.appendChild(overlayContent);
+    container.appendChild(overlay);
+    
+    searchInput.focus();
+    
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const results = searchItems(query);
+        displayResults(query, results, resultsList, inputElement, container, overlay, infoMessage);
+    });
+    
+    resultsList.style.display = 'none';
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === overlay) {
+            container.removeChild(overlay);
+        }
+    });
+
+    overlayBody.addEventListener('touchstart', () => searchInput.blur());
+    overlayBody.addEventListener('scroll', () => searchInput.blur());
+}
+
+function searchItems(query) {
+    const items = ['서울대학교', '서울한영대학교서울한영대학교 서울한영대학교서울한영대학교서울한영대학교 서울한영대학교서울한영대학교 서울한영대학교', '서울여자대학교', '서울과학기술대학교', '서울기독대학교', '서울시립대학교', '서울기독대학교', '서울시립대학교', '남서울대학교', '1서울대학교', '1서울한영대학교', '1서울여자대학교', '1서울과학기술대학교', '1서울기독대학교', '1서울시립대학교', '1서울기독대학교', '1서울시립대학교', '1남서울대학교'];
+    return items.filter(item => item.toLowerCase().includes(query));
+}
+
+function displayResults(query, results, resultsList, inputElement, container, overlay, infoMessage) {
+    if (query === '') {
+        resultsList.style.display = 'none';
+        infoMessage.style.display = 'block';
+    } else if (results.length > 0) {
+        resultsList.style.display = 'block';
+        infoMessage.style.display = 'none';
+    } else {
+        resultsList.style.display = 'none';
+        infoMessage.style.display = 'block';
+    }
+    
+    resultsList.innerHTML = '';
+    results.forEach(result => {
+        const li = document.createElement('li');
+        li.textContent = result;
+        li.addEventListener('click', function() {
+            inputElement.innerText = result;
+            container.removeChild(overlay);
+        });
+        resultsList.appendChild(li);
+    });
+}
+</script>

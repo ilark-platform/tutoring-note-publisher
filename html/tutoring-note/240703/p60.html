@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>프로필</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-thumbnail.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+            </div>
+            <div class="global-nav-bar__title">프로필</div>
+            <div class="global-nav-bar__control">
+                <a class="text-btn text-btn--gray" href="p62.html">미리보기</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container container--bg-white">
+            <main class="content profile">
+                <div class="section flex-box flex-box--justify-between mt4">
+                    <div class="switcher">
+                        <span class="switcher__title">프로필 노출</span>
+                        <label class="switcher__label">
+                            <input type="checkbox" class="switcher__input" checked><b></b>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn--small btn--bordered-primary" data-target="bottomSheet_1" data-toggle="bottom-sheet">프로필 전송</button>
+                </div>
+                <div class="section pb8">
+                    <div class="msg-ly msg-ly--primary-bg mt4">
+                        <i class="icon i-info"></i>
+                        <p class="msg-ly__text">프로필이 완성되었어요.<br>프로필 전송(알림톡)을 할 수 있어요!</p>
+                    </div>
+                    <div class="flex-box flex-box--direction-column flex-box--justify-center flex-box--items-center">
+                        <div class="profile-photo">
+                            <div class="profile-photo__form">
+                                <input type="file" name="profile-photo-button" id="profile-photo-button" class="profile-photo__input-file">
+                                <label for="profile-photo-button"><i class="icon i-photo"></i></label>
+                            </div>
+                            <div class="profile-photo__image-preview">
+                                <img class="profile-photo__img" src="../assets/img/profile_default.jpg" alt="Profile Photo">
+                            </div>
+                            <button id="profile-del" class="profile-photo__del"><i class="icon i-close"></i></button>
+                        </div>
+                        <div class="flex-box flex-box--direction-column flex-box--items-center text-center ">
+                            <!--<div class="badge">본인인증 완료</div>-->
+                            <span class="typo-large strong my1">김멘토 선생님</span>
+                            <span class="typo-small">여 / 24세</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div> 
+                <div class="section">
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">학력정보</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p66.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>서울대학교</p>
+                                    <p>경영학과 08학번</p>
+                                    <p>졸업</p>
+                                </div>
+                            </div>                       
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">지도과목</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p69.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>고등영어, 수능영어, 영어, 고등수학, 중등수학, 수학</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">한줄소개</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p70.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>꼼꼼한 수업으로 신뢰를 드리겠습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">경력</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p72.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>대원외국어고등학교 4년</p>
+                                    <p>대치연세학원 3년</p>
+                                    <p>분당지역 과외 3년</p>
+                                    <p>총 10년</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">수업 스타일 및 수업 특장점</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p73.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>자체교재가 있으며 분당 내신에 특화 되어 있습니다. 매달 정기 수업 평가를 해 보고서를 작성해서 학부모님과 상담을 합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">성적 향상 사례</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p74.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>23년 낙생고 고3 내신 2등급에서 1등급, 24년수능 3등급에서 1등급</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">수업 선호 학년</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p75.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>중3, 고1, 고2, 고3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">과외 방식(대면과외/화상과외)</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p76.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>대면과외</p>
+                                    <p>화상과외</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">수업 경험 학교</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p79.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>낙생고, 보평고, 늘푸른고</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">시범 과외(유료/무료)</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p80.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>무료</p>
+                                    <p>샘플과외는 무료이고 소요시간40분 정도입니다</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">주 사용 교재</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p81.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>자체교재, 쎈</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">대학 합격 및 중/고등학교 정보</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p82.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p><b>합격전형</b> 정시 | 일반</p>
+                                    <p><b>고등학교</b> 분당고등학교</p>
+                                    <p><b>중학교</b> 분당중학교</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">현금영수증 발급 가능 여부</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p88.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>가능</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">사진 및 동영상</div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p89.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="regi-image">
+                                <div class="regi-image__list" id="lightgallery">
+                                    <a 
+                                        class="regi-image__item"
+                                        data-lg-size="2500-2500"
+                                        data-src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                                    >
+                                        <img class="thumb" src="https://images.unsplash.com/photo-1588093413519-17cec3f64e40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                                    </a>
+                                    <a 
+                                        class="regi-image__item"
+                                        data-lg-size="2500-2303"
+                                        data-src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80"
+                                    >
+                                        <img class="thumb" src="https://images.unsplash.com/photo-1563502310703-1ffe473ad66d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+                                    </a>
+                                    <a 
+                                        class="regi-image__item"
+                                        data-lg-size="1280-720"
+                                        data-src="//www.youtube.com/watch?v=EIUJfXk3_3w"
+                                        data-poster="https://img.youtube.com/vi/EIUJfXk3_3w/maxresdefault.jpg"
+                                    >
+                                        <img class="thumb" src="https://img.youtube.com/vi/EIUJfXk3_3w/maxresdefault.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">대면과외 가능지역 <span class="badge">학부모미노출</span></div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p77.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>서울 강남구, 강동구</p>
+                                    <p>경기 고양시 덕양구, 성남시 분당구</p>
+                                    <p>인천 강화군</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">거주지 <span class="badge">학부모미노출</span></div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p78.html"><em>*</em> 수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>경기도 성남시 분당구 판교동</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">수업 가능 일정 <span class="badge">학부모미노출</span></div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p85.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>일요일은 수업 안함</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">평균 수업료 <span class="badge">학부모미노출</span></div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p86.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>고등부기준 시간당 4만5천원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label">휴대폰 외 연락처 <span class="badge">학부모미노출</span></div>
+                            <div class="profile-group__btn">
+                                <button class="pf-modify js-openModalBtn" data-url="p87.html">수정</button>
+                            </div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div>
+                                    <p>이메일: kkk@naver.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="alertModal_1" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                작성 종료
+                <p class="modal__description">이 페이지에서 나가시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="btn btn--small btn--full btn--primary" data-dismiss="modal" onclick="location.href='p7.html'">나가기</button>
+                <button type="button" class="btn btn--small btn--full" data-target="bottomSheet_2" data-toggle="bottom-sheet" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div id="bottomSheet_1" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                한줄소개 직접입력
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group">
+                    <label for="" class="field-group__label field-group__label--blind">한줄소개 직접입력</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="최대 30자 입력">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                    <span class="field-group__check-characters"><em>0</em> / 30자</span>
+                </div>              
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div id="bottomSheet_1" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                프로필 전송
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="msg-ly">
+                    <div class="msg-ly__text">
+                        <ul class="msg-ly__ul">
+                            <li>허위사실에 대한 모든 책임은 전송자에게 있습니다.</li>
+                            <li>입력한 휴대폰번호로 프로필 알림톡이 전송됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="ip-phone2" class="field-group__label">전송 번호(알림톡)</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="ip-phone2" id="ip-phone2" class="field-group__input" placeholder="* 휴대폰번호 입력(숫자만 입력)">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="ip-content" class="field-group__label">코멘트</label>
+                    <div class="field-group__cont">
+                        <textarea name="ip-content" id="ip-content" class="field-group__textarea" placeholder="입력해주세요."></textarea>
+                    </div>
+                </div>        
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">전송하기</button>     
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-dialog" class="modal-dialog">
+        <div id="modalWrapper" class="modal-dialog__wrapper">
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+<script type="module">
+import lightGallery from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4";
+import lgZoom from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4/plugins/zoom";
+import lgThumbnail from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4/plugins/thumbnail";
+import lgVideo from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4/plugins/video";
+
+const $lgContainer = document.getElementById("lightgallery");
+
+const lg = lightGallery($lgContainer, {
+  speed: 500,
+  showZoomInOutIcons: true,
+  actualSize: false,
+  plugins: [lgZoom, lgThumbnail, lgVideo],
+  //licenseKey: 'your_license_key' 상업적 사용시 라이센스키 등록해야됨.
+  mobileSettings: {
+    controls: true,
+    showCloseIcon: true,
+    download: true,
+    rotate: true
+    },
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const inputFile = document.getElementById('profile-photo-button');
+        const imagePreview = document.querySelector('.profile-photo__img');
+        const deleteButton = document.getElementById('profile-del');
+        const label = document.querySelector('label[for="profile-photo-button"]');
+        const defaultImage = "../assets/img/profile_default.jpg";
+
+        inputFile.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    imagePreview.src = e.target.result;
+                    label.style.display = 'none';
+                    deleteButton.classList.add('show');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        deleteButton.addEventListener('click', () => {
+            imagePreview.src = defaultImage;
+            inputFile.value = '';
+            label.style.display = 'flex';
+            deleteButton.classList.remove('show');
+        });
+    });
+</script>
+</body>
+</html>

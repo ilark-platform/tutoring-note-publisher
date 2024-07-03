@@ -1,0 +1,102 @@
+<div class="modal-dialog__container">
+    <div class="modal-dialog__header">
+        <span class="modal-dialog__title">수업 선호 학년</span>
+        <button type="button" class="modal-dialog__close"><i class="icon i-close"></i></button>
+    </div>
+    <div class="modal-dialog__body">
+        <div class="msg-ly">
+            <i class="icon i-info"></i>
+            <p class="msg-ly__text">수업 선호 학년을 모두 선택해주세요.</p>
+        </div>
+        <div class="master-menu mt4">
+            <div class="master-menu__container">
+                <div class="master-menu__list">
+                    <div class="master-menu__sub">
+                        <ul data-menu="서울">
+                            <li><span>유아</span></li>
+                            <li class="active"><span>초1</span></li>
+                            <li><span>초2</span></li>
+                            <li><span>초3</span></li>
+                            <li class="active"><span>초4</span></li>
+                            <li class="active"><span>초5</span></li>
+                            <li class="active"><span>초6</span></li>
+                            <li><span>중1</span></li>
+                            <li><span>중2</span></li>
+                            <li><span>중3</span></li>
+                            <li class="active"><span>고1</span></li>
+                            <li><span>고2</span></li>
+                            <li><span>고3</span></li>
+                            <li><span>N수생</span></li>
+                            <li><span>성인</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="master-menu__result">
+                    <div class="master-menu__result-title">선택항목 <em class="highlight strong">7</em></div>
+                    <ul class="master-menu__result-list">
+                        <li class="master-menu__result-item">
+                            <span class="item-name">초1</span>
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                        </li>
+                        <li class="master-menu__result-item">
+                            <span class="item-name">초4</span>
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                        </li>
+                        <li class="master-menu__result-item">
+                            <span class="item-name">초5</span>
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                        </li>
+                        <li class="master-menu__result-item">
+                            <span class="item-name">초6</span>
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                        </li>
+                        <li class="master-menu__result-item">
+                            <span class="item-name">고1</span>
+                            <span class="btn-delete"><i class="icon i-close-white"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog__footer">
+        <button type="button" class="btn btn--full btn--gray">선택항목 초기화</button>     
+        <button type="button" class="btn btn--full btn--primary">저장하기</button>     
+    </div>
+</div>
+<script>
+const mainMenuItems = document.querySelectorAll('.master-menu__main li');
+const subMenuContainers = document.querySelectorAll('.master-menu__sub ul');
+
+// 초기 설정: 첫 번째 메뉴 항목을 활성화하고 해당 서브 메뉴를 표시
+if (mainMenuItems.length > 0) {
+    mainMenuItems[0].classList.add('active');
+    const initialMenu = mainMenuItems[0].getAttribute('data-menu');
+    subMenuContainers.forEach(subMenu => {
+        if (subMenu.getAttribute('data-menu') === initialMenu) {
+            subMenu.style.display = 'block';
+        } else {
+            subMenu.style.display = 'none';
+        }
+    });
+}
+
+mainMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const selectedMenu = item.getAttribute('data-menu');
+
+        // Main menu item highlight
+        mainMenuItems.forEach(menuItem => menuItem.classList.remove('active'));
+        item.classList.add('active');
+
+        // Display corresponding sub-menu
+        subMenuContainers.forEach(subMenu => {
+            if (subMenu.getAttribute('data-menu') === selectedMenu) {
+                subMenu.style.display = 'block';
+            } else {
+                subMenu.style.display = 'none';
+            }
+        });
+    });
+});
+</script>

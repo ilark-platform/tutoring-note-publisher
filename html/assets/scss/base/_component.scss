@@ -160,6 +160,10 @@
       border-color: $color-primary;
       //box-shadow: 0 0 0 .2rem rgba(246, 98, 23, .2);
     }
+
+    .icon {
+      flex-shrink: 0;
+    }
   }
   
   &__btn {
@@ -215,6 +219,18 @@
     color: $color-black-100;
     outline: 0;
     resize: none;
+  }
+
+  &__div-input {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    width: 100%;
+    min-height: calc(1.5em + 1.5rem);
+    font-size: 1rem;
+    padding: .75rem;
+    word-break: break-all;
+    color: $color-black-100;
   }
 
   &__help {
@@ -438,6 +454,76 @@
     margin-top: 0.2rem;
   }
 }
+
+// --- 검색 팝업 ------------------------------------------------------------------
+.overlay-search {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  z-index: 1000;
+  overflow: auto;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $color-white;
+  }
+
+  &__head {
+    @include position(sticky, $top: 0);
+    height: 3.625rem;
+    display: flex;
+    padding: 1rem;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-400;
+  }
+
+  &__input {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: .75rem;
+    color: $color-black-100;
+    outline: 0;
+  }
+
+  &__dirbutton {
+    font-size: .8125rem !important;
+    padding-right: 0 !important;
+  }
+
+  &__body {
+    flex-grow: 1;
+  }  
+}
+
+// --- 검색 팝업 결과 ------------------------------------------------------------------
+.overlay-results-list {
+  flex-grow: 1;
+  display: none;
+  max-height: 100%;
+  padding: 0 .5rem;
+  overflow-y: auto;
+
+  li {
+    font-size: .875rem;
+    color: $color-black-400;
+    padding: 1rem 1.25rem;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-200;
+    word-break: break-all;
+    cursor: pointer;
+  }
+}
+
 
 .suggestion {
   position: absolute;
@@ -775,7 +861,7 @@
 
       .select-dropdown__list {
         outline: .0625rem solid $color-gray-700;
-        max-height: 288px; 
+        max-height: 245px; 
       }
     }
 
@@ -1146,7 +1232,10 @@
 
   &__body {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     padding: 0 1rem 1.5rem;    
+    overflow-x: hidden;
     overflow-y: auto;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
