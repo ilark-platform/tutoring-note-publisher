@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>과외 상세</title>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"> <!-- tippy 툴팁 -->
+    <link rel="stylesheet" href="../../assets/css/common.css?ver=11111">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">과외 상세</div>
+            <div class="global-nav-bar__control">
+                <a href="p26.html" class="global-nav-bar__link"><i class="icon i-setting"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content">
+                <div class="section">
+                    <div class="tutoring-list">
+                        <div class="tutoring-list__item">
+                            <div class="tutoring-list__header">
+                                <div class="chips">
+                                    <span class="chips__item chips__item--entire">파트너 사업자-멘토림멘토림멘토림멘토림</span>
+                                </div>
+                            </div>
+                            <div class="tutoring-list__body">
+                                <h5 class="tutoring-list__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</h5>    
+                                <ul class="tutoring-schedule">
+                                    <li class="tutoring-schedule__item"><b>월</b> 오후 3:00 ~ 오후 4:00</li>
+                                    <li class="tutoring-schedule__item"><b>화</b> 오후 12:00 ~ 오후 4:00</li>
+                                    <li class="tutoring-schedule__item"><b>수</b> 오전 11:00 ~ 오후 10:00</li>
+                                    <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>    
+                                </ul>
+                            </div>
+                            <div class="tutoring-list__footer2 tutoring-list__footer2--items-end">
+                                <div class="select-dropdown select-dropdown--full">
+                                    <div class="select-dropdown__inner">
+                                        <div class="select-dropdown__arrow"></div>
+                                        <div class="select-dropdown__label">
+                                            <span>1차(진행중)</span>
+                                        </div>
+                                        <ul class="select-dropdown__list">
+                                            <li class="select-dropdown__item">1차(진행중)</li>
+                                            <li class="select-dropdown__item">2차</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--small btn--brown" data-target="alertModal_1" data-toggle="modal">이번 차수 수업 완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alarm">
+                    <p class="alarm__text">시작/종료를 체크하지 않은 수업이 있어요. 확인해주세요!</p>
+                </div>
+                <div class="divider"></div>
+                
+                <div class="section pt5 pb5">
+                    <div class="flex-box flex-box--direction-column flex-box--gap2">
+                        <div class="select-dropdown select-dropdown--full">
+                            <div class="select-dropdown__inner">
+                                <div class="select-dropdown__arrow"></div>
+                                <div class="select-dropdown__label">
+                                    <span>김학생(고2)</span>
+                                </div>
+                                <ul class="select-dropdown__list">
+                                    <li class="select-dropdown__item">김학생(고2)</li>
+                                    <li class="select-dropdown__item">장학생(고3)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-box flex-box--gap1">
+                            <button data-tippy-content="차수 보고서는 이번 차수 수업이 완료되면 전송할 수 있습니다. 세팅한 횟수만큼 수업을 완료하거나, 현재 화면에서 우측 상단의 [이번 차수 수업 완료] 버튼을 눌러 이번 차수 수업을 강제로 완료할 수 있습니다."><i class="icon i-help"></i></button>
+                            <button type="button" class="btn btn--full btn--primary is-disabled">차수 보고서 전송</button>
+                        </div> 
+                    </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div class="flex-box flex-box--justify-between flex-box--items-end">
+                        <div class="section__title">수업 목록</div>
+                        <div class="button-dropdown">
+                            <div class="button-dropdown__inner">
+                                <div class="button-dropdown__label typo-small">
+                                    과거순 <i class="icon i-arrow-down"></i>
+                                </div>
+                                <ul class="button-dropdown__list">
+                                    <li class="button-dropdown__item">과거순</li>
+                                    <li class="button-dropdown__item">최신순</li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="class-list">
+                        <div class="class-list__item">
+                            <div class="class-list__body">
+                                <i class="icon i-class-before"></i>
+                                <h5 class="class-list__title">
+                                    1회<em class="dot"></em>2024.3.6(수)
+                                    <button class="re-send">재전송</button>
+                                </h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>                                   
+                            </div>
+                            <div class="class-list__footer" style="align-items: stretch;">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary btn--txt-row">수업 보고서(전송완료)<br> <span class="typo-small2">2024.4.1 오후4:40</span></button>
+                                <button type="button" class="text-btn text-btn--gray transhistory-toggle" style="flex-shrink: 0;">전송 내역 <i class="icon i-arrow-down"></i></button>
+                            </div>
+                            <div class="transhistory-list">
+                                <div class="transhistory-list__item">
+                                    <ul class="transhistory-list__info">
+                                        <li><b>전송일</b> 2024.3.1 오전 11:15</li>
+                                        <li><b>전송번호</b> 010-1234-5678</li>
+                                        <li><a class="text-btn text-btn--underline" href="#">전송 보고서 확인</a></li>
+                                    </ul>
+                                </div>
+                                <div class="transhistory-list__item">
+                                    <ul class="transhistory-list__info">
+                                        <li><b>전송일</b> 2024.3.1 오전 11:15</li>
+                                        <li><b>전송번호</b> 010-1234-5678</li>
+                                        <li><a class="text-btn text-btn--underline" href="#">전송 보고서 확인</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-list__item">
+                            <div class="class-list__body">
+                                <i class="icon i-class-before"></i>
+                                <h5 class="class-list__title">2회<em class="dot"></em>2024.3.6(수)</h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>                                
+                            </div>
+                            <div class="class-list__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">수업 보고서(작성완료)</button>
+                                <button type="button" class="btn btn--small btn--primary">보고서 전송</button>
+                            </div>
+                        </div>
+                        <div class="class-list__item">
+                            <div class="class-list__body">
+                                <i class="icon i-class-before"></i>
+                                <h5 class="class-list__title">3회<em class="dot"></em>2024.3.8(수)</h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>                                
+                            </div>
+                            <div class="class-list__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">수업 보고서 작성하기</button>
+                            </div>
+                        </div>
+
+                        <div class="class-list__item next-class">
+                            <div class="button-dropdown">
+                                <div class="button-dropdown__inner">
+                                    <div class="button-dropdown__label">
+                                        <i class="icon i-more"></i>
+                                    </div>
+                                    <ul class="button-dropdown__list">
+                                        <li class="button-dropdown__item">변경</li>
+                                        <li class="button-dropdown__item" data-target="alertModal_2" data-toggle="modal">취소</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="class-list__body">
+                                <i class="icon i-class-after"></i>
+                                <h5 class="class-list__title">4회<em class="dot"></em>2024.6.6(수)</h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>
+                            </div>
+                            <div class="class-list__body2">
+                                <button ><i class="icon i-help" data-tippy-content="<span>[시작/종료 시간 체크하기] 버튼을 눌러 미체크 수업의<br> 시작/종료 시간을 체크할 수 있습니다.<br>수업의 일정이 변경되었다면 우측의 더보기 버튼을 눌러<br> [변경] 또는 [취소] 해주세요.</span>"></i></button>
+                                <div class="alarm">
+                                    <span class="alarm__text"><b>미체크 수업</b></span>
+                                    <button class="alarm__button">시작/종료 시간 체크하기</button>
+                                </div> 
+                            </div>
+                            <div class="class-list__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary is-disabled">수업 보고서 작성하기</button>
+                            </div>
+                        </div>
+                        <div class="class-list__item">
+                            <div class="button-dropdown">
+                                <div class="button-dropdown__inner">
+                                    <div class="button-dropdown__label">
+                                        <i class="icon i-more"></i>
+                                    </div>
+                                    <ul class="button-dropdown__list">
+                                        <li class="button-dropdown__item">변경</li>
+                                        <li class="button-dropdown__item" data-target="alertModal_2" data-toggle="modal">취소</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="class-list__body">
+                                <i class="icon i-class-after"></i>
+                                <h5 class="class-list__title">5회<em class="dot"></em>2024.6.6(수)</h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>                                
+                            </div>
+                            <div class="class-list__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary is-disabled">수업 보고서 작성하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-box flex-box--items-center flex-box--justify-center py9">
+                    <a class="text-btn text-btn--large text-btn--underline" href="#" data-target="alertModal_2" data-toggle="modal">과외 계약 종료</a>    
+                </div>
+
+                <div class="floating-btn">
+                    <a href="#" class="floating-btn__link">+ 수업 추가</a>    
+                </div> 
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="alertModal_1" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                수업 완료
+                <p class="modal__description">이번 차수 수업을 완료하시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="btn btn--small btn--full btn--primary" data-target="bottomSheet_1" data-toggle="bottom-sheet" data-dismiss="modal">수업 완료</button>
+                <button type="button" class="btn btn--small btn--full" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+    <div id="alertModal_2" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                과외 계약 종료
+                <p class="modal__description">과외 계약 종료 시 다음 차수 과외를 생성할 수 없습니다. 이번 차수를 끝내고 다음 차수 과외를 생성하시려면 상단의 <b>‘이번 차수 수업 완료’</b> 버튼을 눌러주세요. 과외 계약을 종료 하시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="btn btn--small btn--full btn--primary" data-dismiss="modal">과외 계약 종료</button>
+                <button type="button" class="btn btn--small btn--full" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+
+<!-- tippy 툴팁 -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    tippy('[data-tippy-content]', {
+        allowHTML: true,
+        theme: 'brown',
+        placement: 'bottom',
+    });
+
+    var toggleButtons = document.querySelectorAll('.transhistory-toggle');
+
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var transhistoryList = button.parentElement.nextElementSibling;
+            if (transhistoryList.style.display === 'none' || transhistoryList.style.display === '') {
+                transhistoryList.style.display = 'block';
+                button.classList.add('active');
+            } else {
+                transhistoryList.style.display = 'none';
+                button.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

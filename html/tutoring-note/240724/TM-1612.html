@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>수업 보고서</title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="#" class="global-nav-bar__link" data-target="alertModal_1" data-toggle="modal" data-dismiss="bottom-sheet"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">수업 보고서</div>
+            <div class="global-nav-bar__control">
+                <a href="#" class="global-nav-bar__link"><i class="icon i-home"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content pb12">
+                <div class="section pt5">
+                    <div class="select-dropdown select-dropdown--full">
+                        <div class="select-dropdown__inner">
+                            <div class="select-dropdown__arrow"></div>
+                            <div class="select-dropdown__label">
+                                <span>김학생(고2)</span>
+                            </div>
+                            <ul class="select-dropdown__list">
+                                <li class="select-dropdown__item">김학생(고2)</li>
+                                <li class="select-dropdown__item">장학생(고3)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="class-list">
+                        <div class="class-list__item class-list__item--no-border">
+                            <div class="class-list__body">
+                                <i class="icon i-class-before"></i>
+                                <h5 class="class-list__title">1회<em class="dot"></em>2024.3.6(수)</h5> 
+                                <p class="class-list__time">오후 3:00 ~ 오후 4:40</p>   
+                                <div class="chips mt3">
+                                    <span class="chips__item chips__item--entire"><i class="icon i-check"></i> 실제 과외 시간 - 오후 2:59 ~ 오후 4:45</span>
+                                </div>                               
+                            </div>
+                            <div class="class-list__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">보고서 전송</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div> 
+                <div class="section pt1">
+                    <div class="field-group2">
+                        <label for="field1" class="field-group2__label">수업 내용 및 진도</label>
+                        <div class="field-group2__cont">
+                            <textarea name="field1" id="field1" class="field-group2__textarea js-auto-resize" rows="1" placeholder="입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="field-group2">
+                        <label for="field2" class="field-group2__label">과제</label>
+                        <div class="field-group2__cont">
+                            <textarea name="field2" id="field2" class="field-group2__textarea js-auto-resize" rows="1" placeholder="입력해주세요."></textarea>
+                        </div>
+                    </div> 
+                    <div class="field-group2">
+                        <span class="field-group2__label">수업 태도 <em class="color-red">*</em></span>
+                        <div class="field-group2__cont">
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">개선필요</span>
+                                    <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">중</span>
+                                    <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">중상</span>
+                                    <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">상</span>
+                                    <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">최상</span>
+                                    <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="field-group2">
+                        <span class="field-group2__label">과제 완성도 <em class="color-red">*</em></span>
+                        <div class="field-group2__description pb2">
+                            <span>0점 (낮음)</span>
+                            <span>10점 (높음)</span>
+                        </div> 
+                        <div class="field-group2__cont">
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">0</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">1</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">2</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">3</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">4</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">5</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">6</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">7</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">8</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">9</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">10</span>
+                                    <input type="radio" name="rd-group3" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="field-group2">
+                        <span class="field-group2__label">테스트</span>
+                        <div class="field-group2__cont">
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">개선필요</span>
+                                    <input type="radio" name="rd-group2" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">중</span>
+                                    <input type="radio" name="rd-group2" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">중상</span>
+                                    <input type="radio" name="rd-group2" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">상</span>
+                                    <input type="radio" name="rd-group2" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                            <div class="radiobox radiobox--col3">
+                                <label class="radiobox__wrapper">
+                                    <span class="radiobox__title">최상</span>
+                                    <input type="radio" name="rd-group2" class="radiobox--hidden radiobox--primary">
+                                    <div class="radiobox--show"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-group2">
+                        <label for="field6" class="field-group2__label">피드백</label>
+                        <div class="field-group2__cont">
+                            <textarea name="field6" id="field6" class="field-group2__textarea js-auto-resize" rows="1" placeholder="입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="field-group2">
+                        <span class="field-group2__label">다음 수업일시 <em class="color-red">*</em></span>
+                        <div class="field-group2__cont">
+                            <div class="select-dropdown select-dropdown--full">
+                                <div class="select-dropdown__inner">
+                                    <div class="select-dropdown__arrow"></div>
+                                    <div class="select-dropdown__label select-dropdown__label--small">
+                                        <span>2024.3.11(월) 오후 3:00 ~ 오후 4:40</span>
+                                    </div>
+                                    <ul class="select-dropdown__list">
+                                        <li class="select-dropdown__item">2024.3.11(월) 오후 3:00 ~ 오후 4:40</li>
+                                        <li class="select-dropdown__item">2024.3.21(월) 오후 3:00 ~ 오후 4:40</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-group2">
+                        <label for="field8" class="field-group2__label">코멘트</label>
+                        <div class="field-group2__cont">
+                            <textarea name="field8" id="field8" class="field-group2__textarea js-auto-resize" rows="1" placeholder="입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="bottom-button-wrap py10">
+                        <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet"><i class="icon i-refresh"></i> 초기화</button>     
+                        <button type="button" class="btn btn--full btn--primary" data-target="alertModal_1" data-toggle="modal" data-dismiss="bottom-sheet">저장하기</button>     
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="alertModal_1" class="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                작성 종료
+                <p class="modal__description">이 페이지에서 나가시겠습니까?</p>  
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="btn btn--small btn--full btn--primary" data-dismiss="modal" onclick="location.href='p7.html'">나가기</button>
+                <button type="button" class="btn btn--small btn--full" data-target="bottomSheet_2" data-toggle="bottom-sheet" data-dismiss="modal">취소</button>                
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+
+</body>
+</html>

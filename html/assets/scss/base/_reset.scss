@@ -186,3 +186,15 @@ input[type=number] {
   font-family: 'NotoSansCJKkr';
 }
 */
+
+select {
+  width: 100%;
+  height: calc(1.5em + 1.5rem);
+  font-size: 1rem;
+  padding: .75rem;
+  color: #242424;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' style='opacity:0.6' fill='%242424' viewBox='0 0 6.42 4'><path d='M6.42.69,3.21,4,0,.69.71,0l2.5,2.57L5.71,0Z'/></svg>");
+	background-size: .75rem;
+	background-position: calc(100% - 1rem) 50%;
+	background-repeat: no-repeat;
+}

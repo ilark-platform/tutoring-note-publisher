@@ -16,6 +16,10 @@
     align-items: center;
   }
 
+  &--items-end {
+    align-items: flex-end;
+  }
+
   &--justify-center {
     justify-content: center;
   }
@@ -26,6 +30,14 @@
 
   &--justify-end {
     justify-content: flex-end;
+  }
+
+  &--gap1 {
+    gap: .625rem;
+  }
+
+  &--gap2 {
+    gap: 1rem;
   }
 }
 
@@ -640,8 +652,24 @@
 }
 
 
+/* ------------------------------ 리스트 정렬 ------------------------------ */
+.sorting {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: .875rem;
+  }
+}
+
+
 /* ------ CUSTOM CHECKBOX ----- */
 .checkbox {
+
+  & + & {
+    margin-top: .75rem;
+  }
+
   &__wrapper {
     display: flex;
     position: relative;
@@ -760,6 +788,10 @@
     color: $color-black-200;
     vertical-align: middle;
     word-break: break-all;
+
+    &--large {
+      font-size: 1rem;
+    }
   }
   
   &--hidden {
@@ -979,6 +1011,11 @@
     border-radius: 52px;
   }
 
+  &--txt-row {
+    flex-direction: column;
+    white-space: normal;
+  }
+
 	&.is-disabled {
     background-color: $color-gray-600;
     color: $color-white;
@@ -1000,15 +1037,40 @@
 @include bem-button('primary', $button-primary-color, $color-white);
 @include bem-button('gray', $color-gray-300, $color-black-400);
 @include bem-button('gray-2', $color-gray-500, $color-black-400);
+@include bem-button('brown', $button-brown-color, $color-white);
 
 // --- button: bordered ---------------------------------------------------------
 @include bem-button-bordered('base', $color-gray-500, $color-gray-700);
 @include bem-button-bordered('primary', $button-primary-color, $button-primary-color);
-//@include bem-button-bordered('black', $button-black-color, $button-black-color);
+@include bem-button-bordered('black', $color-black-400, $color-black-400);
 
-.btn--gray:hover {
+.btn--gray:hover,
+.btn--bordered-base:hover {
   background-color: darken($color-gray-300, 10%);
   border-color: darken($color-gray-300, 10%);
+}
+
+.btn-urlcopy { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: $color-black-300;
+  border-radius: 50%;
+
+  .icon.i-urlcopy {
+    transform: rotate(-45deg);
+  }
+}
+.btn-kakao { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #ffe90a;
+  border-radius: 50%;
 }
 
 
@@ -1366,7 +1428,27 @@
     background-color: $color-white;
     border-top: .0625rem solid $color-gray-100;
     z-index: 2;
+
+    & .btn--small {
+      min-width: 0;
+    }
   }
+
+  .field-group.flex-box { 
+    align-items: center;
+    gap: 1rem;
+
+    & .field-group__label {
+      margin-bottom: 0;
+      width: 40%;
+    }
+
+    & .field-group__cont {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+
 }
 
 

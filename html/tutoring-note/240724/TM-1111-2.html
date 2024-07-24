@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>과외 관리</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <style>
+    .swiper-container { width: 100%; height: auto; padding-bottom: 1rem; overflow: hidden; }
+    .swiper-slide { display: flex; align-items: center; justify-content: center; width: 100%; }
+    .swiper-pagination { position: absolute; left: 50%; bottom: 6px; display: flex; align-items: center; justify-content: center; gap: .25rem; width: fit-content; height: 1.25rem; color: #fff; padding: 0 .625rem; background-color: #000; border-radius: 1.25rem; font-size: .625rem; line-height: 1; transform: translateX(-50%); }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+            </div>
+            <div class="global-nav-bar__title">과외 관리</div>
+            <div class="global-nav-bar__control">
+                <a href="#" class="global-nav-bar__link"><i class="icon i-home"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <div class="local-nav-bar">
+                <ul class="local-nav-bar__group">
+                    <li class="local-nav-bar__item">
+                        <a href="p6-1.html" class="local-nav-bar__link local-nav-bar__link--active">진행중</a>
+                    </li>
+                    <li class="local-nav-bar__item">
+                        <a href="p12-1.html" class="local-nav-bar__link">종료</a>
+                    </li>
+                    <li class="local-nav-bar__item">
+                        <a href="p13.html" class="local-nav-bar__link">과외 요청</a>
+                    </li>
+                </ul>
+            </div> 
+            <main class="content">
+                <div class="alarm" style="position: relative;">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="alarm__text">
+                                    <p>시작/종료를 체크하지 않은 수업을 확인해주세요!</p>
+                                    <div class="typo-medium"><b>과외명 : 부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 김개똥, 이지나, 이종석</b></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="alarm__text">
+                                    <p>시작/종료를 체크하지 않은 수업을 확인해주세요!</p>
+                                    <div class="typo-medium"><b>과외명 : 신도림<em class="dot"></em>수학<em class="dot"></em>박학생, 최영희, 홍길동</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="section">
+                    <div class="tutoring-list">
+                        <div class="tutoring-list__item">
+                            <a href="p7.html" class="tutoring-list__link">
+                                <div class="tutoring-list__header">
+                                    <div class="chips">
+                                        <span class="chips__item chips__item--entire">파트너 사업자-멘토림멘토림멘토림멘토림</span>
+                                    </div>
+                                </div>
+                                <div class="tutoring-list__body">
+                                    <h5 class="tutoring-list__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</h5>    
+                                    <ul class="tutoring-schedule">
+                                        <li class="tutoring-schedule__item"><b>월</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>화</b> 오후 12:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>수</b> 오전 11:00 ~ 오후 10:00</li>
+                                        <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>    
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tutoring-list__item">
+                            <a href="p7.html" class="tutoring-list__link">
+                                <div class="tutoring-list__header">
+                                    <div class="chips">
+                                        <span class="chips__item chips__item--entire">파트너 사업자-멘토림</span>
+                                    </div>
+                                </div>
+                                <div class="tutoring-list__body">
+                                    <h5 class="tutoring-list__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</h5>    
+                                    <ul class="tutoring-schedule">
+                                        <li class="tutoring-schedule__item"><b>월</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>화</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>수</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>목</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>    
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tutoring-list__item">
+                            <a href="p7.html" class="tutoring-list__link">    
+                                <div class="tutoring-list__header">
+                                    <div class="chips">
+                                        <span class="chips__item chips__item--entire">파트너 사업자-멘토림</span>
+                                    </div>
+                                </div>
+                                <div class="tutoring-list__body">
+                                    <h5 class="tutoring-list__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</h5>    
+                                    <ul class="tutoring-schedule">
+                                        <li class="tutoring-schedule__item"><b>월</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>화</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>수</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>목</b> 오후 3:00 ~ 오후 4:00</li>
+                                        <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>    
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tutoring-list__item">
+                            <a href="p7.html" class="tutoring-list__link">
+                                <div class="tutoring-list__body">
+                                    <h5 class="tutoring-list__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</h5>    
+                                    <ul class="tutoring-schedule">
+                                        <li class="tutoring-schedule__item"><b>금</b> 오후 3:00 ~ 오후 4:00</li>    
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-btn">
+                    <a href="p21.html" class="floating-btn__link">+ 과외 추가</a>    
+                </div>                        
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+</div> 
+
+<script src="../assets/js/function.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoHeight: true, // 높이 자동 조정
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+    });
+</script>
+</body>
+</html>

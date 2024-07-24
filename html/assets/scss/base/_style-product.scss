@@ -154,6 +154,11 @@
     background-image: icon(arrow-right, 'f66217');
   }
 
+  .icon.i-arrow-down {
+    @include size(20px, 20px);
+    background-image: icon(arrow-down, 'b6b6b6');
+  }
+
   &--gray {
     color: $color-gray-700;
   }
@@ -166,6 +171,27 @@
     line-height: 1.2;
     color: $color-gray-700;
     border-bottom: 1px solid $color-gray-700;
+  }
+}
+
+.alarm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -1rem;
+  padding: .875rem 1rem;
+  background-color: $color-dark-blue-gray;
+
+  &__text {
+    font-size: .875rem;
+    color: $color-white;
+    text-align: center;
+
+    .dot {
+      width: 3px; 
+      height: 3px; 
+      background-color: rgba($color-white, .3);
+    }
   }
 }
 
@@ -209,7 +235,16 @@
       max-width: 100%;
       overflow: visible;
       text-overflow: clip;
-    } 
+    }
+    
+    &--gray {
+      color: $color-white;
+      background-color: $color-gray-600;  
+    }
+    &--purple {
+      color: $color-white;
+      background-color: $color-purple;  
+    }
   }
 }
 
@@ -292,9 +327,13 @@
 
   &--bodered {
     margin: 0;
-    border: .0625rem solid $color-gray-200;
-    border-radius: $border-radius;
+    
     overflow: hidden;
+
+    & .tutoring-list__item {
+      border: .0625rem solid $color-gray-400;
+      border-radius: $border-radius;  
+    }
   }
 
   &__item {
@@ -363,6 +402,10 @@
     margin: .875rem -1rem 0;
     padding: .875rem 1rem 0;
     border-top: .0625rem solid $color-gray-100;
+
+    &--items-end {
+      align-items: flex-end;
+    }
   } 
 }
 
@@ -380,7 +423,7 @@
     border-radius: $border-radius;
 
     & ~ & {
-      margin-top: .5rem;
+      margin-top: 1rem;
     }
 
     &--disabled {
@@ -400,6 +443,24 @@
           top: 0; 
           left: 0;
         }
+      }
+    }
+
+    &.next-class {
+      &::after {
+        position: absolute;
+        left: 1rem;
+        top: -.1875rem;
+        content: '다음 수업';
+        font-size: .625rem;
+        line-height: 1rem;
+        text-align: center;
+        width: 3rem;
+        height: 1rem;
+        color: #fff;
+        background-color: $color-medium-teal;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
       }
     }
 
@@ -485,12 +546,255 @@
       font-weight: 500;
       white-space: nowrap;
     }
-
-
   }
+
+  &__body2 {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: 1rem;
+  
+    & .alarm {
+      flex-grow: 1;
+      display: flex;
+      gap: 0.625rem;
+      margin: 0;
+      padding: .5rem;
+      border-radius: .25rem;
+
+      button {
+        font-size: 0.875rem;
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }    
+  }
+
+  .re-send {
+    margin-left: .5rem;
+    font-size: .75rem;
+    height: 22px;
+    color: $color-white;
+    padding: 0 .75rem;
+    border-radius: 22px;
+    background-color: $color-gray-800;
+  }
+  
+}
+
+
+// --- 파트너 사업자 리스트 ------------------------------------------------------------------
+.partner-bslist {
+  margin: 0 -1rem;
+  padding: 1.5rem 1rem;
+  background-color: $color-white;
+
+  &__item {
+    position: relative;
+    padding: 1.25rem 1rem;
+    background-color: $color-white;
+    border: .0625rem solid $color-gray-300;
+    border-radius: $border-radius;
+    
+    & ~ & {
+      margin-top: .5rem;
+    }
+
+    .button-dropdown {
+      position: absolute;
+      top: 1.25rem;
+      right: 1rem;
+    }    
+  }
+
+  &__body {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__pic  {
+    width: 70px;
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .icon.i-parents {
+      width: 70px;
+      height: 70px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='104' fill='%23ffffff' viewBox='0 -960 960 960'%3E%3Cpath d='M247.85-260.62q51-36.69 108.23-58.03Q413.31-340 480-340t123.92 21.35q57.23 21.34 108.23 58.03 39.62-41 63.73-96.84Q800-413.31 800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 66.69 24.12 122.54 24.11 55.84 63.73 96.84ZM480-460q-50.54 0-85.27-34.73T360-580q0-50.54 34.73-85.27T480-700q50.54 0 85.27 34.73T600-580q0 50.54-34.73 85.27T480-460Zm0 340q-75.31 0-141-28.04t-114.31-76.65Q176.08-273.31 148.04-339 120-404.69 120-480t28.04-141q28.04-65.69 76.65-114.31 48.62-48.61 114.31-76.65Q404.69-840 480-840t141 28.04q65.69 28.04 114.31 76.65 48.61 48.62 76.65 114.31Q840-555.31 840-480t-28.04 141q-28.04 65.69-76.65 114.31-48.62 48.61-114.31 76.65Q555.31-120 480-120Z'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $color-gray-300;
+      border-radius: 50%;
+      border: 1px solid $color-gray-300;
+      overflow: hidden;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    word-wrap: break-word;
+    color: $color-gray-900;
+
+    b {
+      color: $color-black-100;
+    }
+
+    .icon.i-favorite {
+      width: 20px;
+      height: 20px;
+      vertical-align: top;
+    }
+  }
+
+  &__date {
+    font-size: .875rem;
+    color: $color-gray-900;
+    letter-spacing: 0;
+
+    .btn-edit {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: .5rem;
+      margin-top: -.125rem;
+
+      .i-edit {
+        background-image: icon(edit, '868686');
+      }      
+    }
+  }
+
+  &__request-date {
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: -0.006rem;
+    color: $color-gray-700;
+    margin: 0;
+  }
+
+  &__btn {
+    display: flex;
+    gap: .5rem;
+    margin-top: .25rem;
+
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border: .0625rem solid #a38374;
+      border-radius: 50%;
+
+      & .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      &.btn-favorite {
+        background-color: #fff;
+        border-color: #fff;
+        opacity: .2;
+
+        & .icon.i-favorite {
+          width: 1.625rem;
+          height: 1.625rem;
+        }
+
+        &.active {
+          opacity: 1;
+
+          & .icon.i-favorite {
+            background-image: icon(favorite, 'f66217');
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .625rem;
+    margin: .875rem -1rem 0;
+    padding: .875rem 1rem 0;
+    //border-top: .0625rem solid $color-gray-100;
+
+    &--items-end {
+      align-items: flex-end;
+    }
+  } 
 }
 
 // --- 전송 내역 리스트 ------------------------------------------------------------------
+.transhistory-list {
+  display: none;
+  margin-top: 1rem;
+
+  &__item {
+    position: relative;
+    padding: .5rem;
+    background-color: $color-gray-100;
+    border: .0625rem solid $color-gray-200;
+    border-radius: $border-radius;
+    
+    & ~ & {
+      margin-top: .3125rem;
+    }
+  }
+
+  &__info {
+    padding: .5rem;
+
+    & li {
+      position: relative;
+      padding-left: .625rem;    
+      font-size: .8125rem;
+      color: $color-gray-900;
+      letter-spacing: -0.006rem;
+      white-space: nowrap;
+  
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        content: '';
+        width: 3px;
+        height: 3px;
+        background-color: $color-gray-500;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+  
+      b {
+        display: inline-block;
+        font-weight: 500;
+        color: $color-black-100;
+        margin-right: .25rem;
+      }
+
+      .text-btn {
+        color: $color-black-100;
+      }
+    }
+  }
+}
+/*
 .transhistory-list {
   padding: 1.25rem 0;
   background-color: $color-white;
@@ -550,6 +854,7 @@
     }
   }
 }
+*/
 
 // --- 학부모 연락처 리스트 ------------------------------------------------------------------
 .parents-list {
@@ -1370,4 +1675,138 @@
   }
 
 }
+
+
+/* ------------------------------ 메인 ------------------------------ */
+
+
+/* ------------------------------ 수업 알림 레이어 ------------------------------ */
+.ly-alarm {
+  @include position(fixed, $top: 0, $left: 0, $bottom: 0, $right: 0);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 1100;
+
+  &__close {
+    @include position(absolute, $top: 1.5rem, $right: 1rem);
+    @include size(24px, 24px);
+    display: flex;
+    color: $color-black;
+    background-color: $color-white;
+    z-index: 3;
+  }
+
+  &__container {
+    position: relative;
+    width: 80%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.1), 0 24px 38px 3px rgba(0, 0, 0, 0.1), 0 9px 46px 8px rgba(0, 0, 0, 0.1);
+    background-color: $color-white;
+
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: '';
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 -880 960 960'%3E%3Cpath fill='%23ffffff' stroke='%23ffffff' stroke-width='48' stroke-linecap='round' stroke-linejoin='round' d='M382-267.69 183.23-466.46 211.77-495 382-324.77 748.23-691l28.54 28.54L382-267.69Z'/%3E%3C/svg%3E");
+      background-position: top 8px center;
+      background-color: $color-primary;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      padding: .5rem;
+      
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__header {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: .875rem;
+  }
+
+  &__body {
+    max-height: 70vh;
+    overflow: hidden;
+  }
+
+  &__timebox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+    
+    & .btn {
+      flex-direction: column;
+      color: $color-white;
+      background-color: transparent;
+      text-align: center;
+      padding: 1rem;
+      border-radius: $border-radius;
+      background-color: $color-primary;
+
+      .typo-large {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: 600;
+    border-radius: $border-radius;
+    padding: 1rem;
+    background-color: $color-gray-100;
+    color: $color-black-100;
+
+    & .typo-large {
+      font-size: 2.25rem;      
+      line-height: 1.1;
+    }
+  }
+  
+  & .chips__item {
+    background-color: $color-black-300;
+    color: $color-white;
+  }
+
+  &--end {
+    & .ly-alarm__container::after {
+      background-color: #277153;
+    }
+    & .ly-alarm__timebox .btn { 
+      background-color: #277153;
+    }
+  }
+
+}
+
+
 
