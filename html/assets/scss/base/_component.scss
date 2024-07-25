@@ -388,7 +388,7 @@
 }
 
 
-/* ------------------------------ CUSTOM FILE UPLOAD ------------------------------ */
+/* ------------------------------ CUSTOM FILE UPLOAD & DOWNLOAD ------------------------------ */
 .file-upload {
   display: flex;
   gap: .5rem;
@@ -456,6 +456,41 @@
   }
 }
 
+.file-download {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem 0;
+
+  &__preview {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    padding: 0 1rem 0 .5rem;
+    border: .0625rem solid $color-gray-400;
+
+    a {
+      display: flex;
+      font-size: .875rem;
+      color: $color-black-100;
+      padding: .5rem 0;
+      text-decoration: none;
+      overflow: hidden;
+
+      .name {
+        flex: 1 1 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ext {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
 
 /* ------------------------------ SEARCH ------------------------------ */
 .search-form {

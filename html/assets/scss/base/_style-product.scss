@@ -1470,6 +1470,24 @@
   }
 }
 
+.certificate-preview {
+  padding: 1rem;
+  border: .0625rem solid $color-gray-300;
+  background-color: $color-gray-100;
+  border-radius: $border-radius;
+
+  &__img {
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
 
 /* ------------------------------ 지도과목/지역 ------------------------------ */
 .master-menu {

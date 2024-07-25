@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>인적 조건</title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">인적 조건</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content">
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 선생님
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 요청
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="bottomSheet_1" class="bottom-sheet open">
+        <div class="bottom-sheet__container" style="opacity:1; transform: translate(0,0);">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                인적 조건
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group mt0">
+                    <span for="ip-name" class="field-group__label">성별</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">전체</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">남자</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">여자</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span for="ip-name" class="field-group__label">연령대</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">10대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">20대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">30대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">40대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">50대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">60대 이상</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">선택항목 초기화</button>  
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+
+</body>
+</html>

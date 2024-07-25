@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>파트너 선생님 신청</title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">파트너 선생님 신청</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content">
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 선생님
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 요청
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="bottomSheet_1" class="bottom-sheet open">
+        <div class="bottom-sheet__container" style="opacity:1; transform: translate(0,0);">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                파트너 선생님 신청
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="msg-ly">
+                    <div class="msg-ly__text">
+                        <ul class="msg-ly__ul">
+                            <li>선생님의 이름을 검색하여 파트너를 신청하세요.</li>
+                            <li>과외노트에 가입된 선생님에게만 파트너 신청을 할 수 있습니다.</li>
+                            <li>파트너 신청 후 선생님의 승인이 완료되면 파트너 연결이 됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span class="field-group__label field-group__label--blind">선생님 이름 검색</span>
+                    <div class="field-group__cont">
+                        <i class="icon i-search"></i>
+                        <input type="text" name="" id="" class="field-group__input js-overlaySearch" placeholder="이름 검색">
+                    </div>
+                    <div class="overlayContainer"></div>
+                </div>
+                <p class="typo-small color-gray-700 mt4">선생님이 아직 과외노트 앱에 가입하지 않았다면<br> 선생님에게 과외노트 앱을 공유하고 파트너를 맺어보세요!</p>
+                <div class="flex-box flex-box--gap1 my4">
+                    <button type="button" class="btn-urlcopy"><i class="icon i-urlcopy"></i></button>     
+                    <button type="button" class="btn-kakao"><i class="icon i-kakao"></i></button>  
+                </div>
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">신청하기</button>     
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+<script src="../assets/js/function.js"></script>
+<script>
+document.querySelectorAll('.js-overlaySearch').forEach(input => {
+    input.addEventListener('click', function() {
+        const overlayContainer = this.closest('.field-group__cont').nextElementSibling;
+        createSearchOverlay(overlayContainer, this);
+    });
+});
+
+function createSearchOverlay(container, inputElement) {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay-search';
+    overlay.style.display = 'flex';
+    
+    const overlayContent = document.createElement('div');
+    overlayContent.className = 'overlay-search__content';
+
+    const overlayHead = document.createElement('div');
+    overlayHead.className = 'overlay-search__head';
+
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.id = 'searchInput';
+    searchInput.className = "overlay-search__input";
+    searchInput.placeholder = 'Search...';
+    
+    searchInput.value = inputElement.value || ''; // Initialize with the current input value, ensure it's not undefined
+    
+    const closeButton = document.createElement('button');
+    closeButton.className = 'closeButton';
+    closeButton.innerHTML = '<i class="icon i-arrow-back"></i>';
+    closeButton.addEventListener('click', function() {
+        container.removeChild(overlay);
+    });
+
+    overlayHead.appendChild(closeButton);
+    overlayHead.appendChild(searchInput);
+
+    const overlayBody = document.createElement('div');
+    overlayBody.className = 'overlay-search__body';
+    
+    const resultsList = document.createElement('ul');
+    resultsList.className = 'overlay-results-list';
+    resultsList.id = 'resultsList';
+
+    overlayBody.appendChild(resultsList);
+    overlayContent.appendChild(overlayHead);
+    overlayContent.appendChild(overlayBody);
+    overlay.appendChild(overlayContent);
+    container.appendChild(overlay);
+    
+    searchInput.focus();
+    
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const results = searchItems(query);
+        displayResults(query, results, resultsList, inputElement, container, overlay);
+    });
+    
+    resultsList.style.display = 'none';
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === overlay) {
+            container.removeChild(overlay);
+        }
+    });
+
+    overlayBody.addEventListener('touchstart', () => searchInput.blur());
+    overlayBody.addEventListener('scroll', () => searchInput.blur());
+}
+
+function searchItems(query) {
+    const items = ['김선생 010-****-1234', '김선주 010-****-7894', '김선자 010-****-9999'];
+    return items.filter(item => item.toLowerCase().includes(query));
+}
+
+function displayResults(query, results, resultsList, inputElement, container, overlay) {
+    if (query === '') {
+        resultsList.style.display = 'none';
+    } else if (results.length > 0) {
+        resultsList.style.display = 'block';
+    } else {
+        resultsList.style.display = 'none';
+    }
+    
+    resultsList.innerHTML = '';
+    results.forEach(result => {
+        const li = document.createElement('li');
+        li.textContent = result;
+        li.addEventListener('click', function() {
+            inputElement.value = result;
+            container.removeChild(overlay);
+        });
+        resultsList.appendChild(li);
+    });
+}
+    </script>
+
+</body>
+</html>

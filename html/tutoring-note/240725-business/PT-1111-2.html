@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>파트너 선생님</title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+            </div>
+            <div class="global-nav-bar__title">파트너 선생님</div>
+            <div class="global-nav-bar__control">
+                <a href="#" class="global-nav-bar__link"><i class="icon i-home"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <div class="local-nav-bar">
+                <ul class="local-nav-bar__group">
+                    <li class="local-nav-bar__item">
+                        <a href="#" class="local-nav-bar__link local-nav-bar__link--active">파트너 선생님</a>
+                    </li>
+                    <li class="local-nav-bar__item">
+                        <a href="#" class="local-nav-bar__link"><i class="icon i-favorite"></i></a>
+                    </li>
+                    <li class="local-nav-bar__item">
+                        <a href="#" class="local-nav-bar__link">파트너 신청</a>
+                    </li>
+                </ul>
+            </div> 
+            <main class="content">
+                <div class="filter-bar">
+                    <div class="filter-bar__group">
+                        <div class="filter-bar__item">
+                            <button class="fr-search"><span></span></button>
+                        </div>
+                        <div class="filter-bar__item">
+                            <button class="fr-refresh"><span>초기화</span></button>
+                        </div>
+                        <div class="filter-bar__item">
+                            <button class="fr-option" data-target="bottomSheet_2" data-toggle="bottom-sheet"><span>인적조건</span></button>
+                        </div>
+                        <div class="filter-bar__item">
+                            <button class="fr-option active" data-target="bottomSheet_3" data-toggle="bottom-sheet"><span>과외조건</span></button>
+                        </div>
+                        <div class="filter-bar__item">
+                            <button class="fr-option js-openModalBtn" data-url="PT-1115.html"><span>과목</span></button>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label for="" class="field-group__label field-group__label--blind">이름 검색</label>
+                        <div class="field-group__cont">
+                            <i class="icon i-search"></i>
+                            <input type="text" name="" id="" class="field-group__input" placeholder="이름 검색">
+                            <span class="field-group__clear js-input-clear"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="section pt5">
+                    <div class="sorting">
+                        <span class="sorting__title"><b>4</b> 건</span>
+                        <div class="button-dropdown">
+                            <div class="button-dropdown__inner">
+                                <div class="button-dropdown__label typo-small">
+                                    최신순 <i class="icon i-arrow-down"></i>
+                                </div>
+                                <ul class="button-dropdown__list">
+                                    <li class="button-dropdown__item">과거순</li>
+                                    <li class="button-dropdown__item">최신순</li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="partner-bslist">
+                        <div class="partner-bslist__item">
+                            <div class="button-dropdown">
+                                <div class="button-dropdown__inner">
+                                    <div class="button-dropdown__label">
+                                        <i class="icon i-more"></i>
+                                    </div>
+                                    <ul class="button-dropdown__list">
+                                        <li class="button-dropdown__item">파트너해제</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="partner-bslist__body">
+                                <div class="partner-bslist__pic">
+                                    <img src="https://img.etoday.co.kr/pto_db/2024/03/20240328161933_2005591_528_473.jpg">
+                                </div>
+                                <div class="partner-bslist__info">
+                                    <h5 class="partner-bslist__title"><b>이진희 선생님</b></h5>
+                                    <p class="partner-bslist__date">김멘토<button type="button" class="btn-edit" data-target="bottomSheet_1" data-toggle="bottom-sheet"><i class="icon i-edit"></i></button></p>
+                                    <div class="partner-bslist__btn">
+                                        <button><i class="icon i-call"></i></button>
+                                        <button><i class="icon i-mail"></i></button>
+                                        <button class="btn-favorite active"><i class="icon i-favorite"></i></button>
+                                    </div>                              
+                                </div>
+                            </div>    
+                            <div class="partner-bslist__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">수업</button>
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">프로필 관리</button>
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">프로필 전송</button>
+                            </div>                           
+                        </div>
+                        <div class="partner-bslist__item">
+                            <div class="button-dropdown">
+                                <div class="button-dropdown__inner">
+                                    <div class="button-dropdown__label">
+                                        <i class="icon i-more"></i>
+                                    </div>
+                                    <ul class="button-dropdown__list">
+                                        <li class="button-dropdown__item">파트너해제</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="partner-bslist__body">
+                                <div class="partner-bslist__pic">
+                                    <img src="https://img.etoday.co.kr/pto_db/2024/03/20240328161933_2005591_528_473.jpg">
+                                </div>
+                                <div class="partner-bslist__info">
+                                    <h5 class="partner-bslist__title"><b>이진희 선생님</b></h5>
+                                    <p class="partner-bslist__date">성격 예민하신 편이나  성적 결과 좋음.<button type="button" class="btn-edit" data-target="bottomSheet_1" data-toggle="bottom-sheet"><i class="icon i-edit"></i></button></p>
+                                    <div class="partner-bslist__btn">
+                                        <button><i class="icon i-call"></i></button>
+                                        <button><i class="icon i-mail"></i></button>
+                                        <button class="btn-favorite"><i class="icon i-favorite"></i></button>
+                                    </div>                              
+                                </div>
+                            </div>    
+                            <div class="partner-bslist__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary px2">수업</button>
+                                <button type="button" class="btn btn--small btn--full btn--primary">프로필 작성 요청</button>
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary px2 is-disabled">프로필 전송</button>
+                            </div>                           
+                        </div>
+                        <div class="partner-bslist__item">
+                            <div class="button-dropdown">
+                                <div class="button-dropdown__inner">
+                                    <div class="button-dropdown__label">
+                                        <i class="icon i-more"></i>
+                                    </div>
+                                    <ul class="button-dropdown__list">
+                                        <li class="button-dropdown__item">파트너해제</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="partner-bslist__body">
+                                <div class="partner-bslist__pic">
+                                    <img src="https://img.etoday.co.kr/pto_db/2024/03/20240328161933_2005591_528_473.jpg">
+                                </div>
+                                <div class="partner-bslist__info">
+                                    <h5 class="partner-bslist__title"><b>이진희 선생님</b></h5>
+                                    <p class="partner-bslist__date">김멘토<button type="button" class="btn-edit" data-target="bottomSheet_1" data-toggle="bottom-sheet"><i class="icon i-edit"></i></button></p>
+                                    <div class="partner-bslist__btn">
+                                        <button><i class="icon i-call"></i></button>
+                                        <button><i class="icon i-mail"></i></button>
+                                        <button class="btn-favorite"><i class="icon i-favorite"></i></button>
+                                    </div>                              
+                                </div>
+                            </div>    
+                            <div class="partner-bslist__footer">
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">수업</button>
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">프로필 관리</button>
+                                <button type="button" class="btn btn--small btn--full btn--bordered-primary">프로필 전송</button>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>  
+                <div class="floating-btn">
+                    <a href="#" class="floating-btn__link">+ 파트너 신청</a>    
+                </div>            
+            </main>
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 선생님
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 요청
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="bottomSheet_1" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                메모 입력
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group">
+                    <label for="" class="field-group__label field-group__label--blind">메모</label>
+                    <div class="field-group__cont">
+                        <input type="text" name="" id="" class="field-group__input" placeholder="메모 입력">
+                        <span class="field-group__clear js-input-clear"></span>
+                    </div>
+                    <span class="field-group__check-characters"><em>0</em> / 15자</span>
+                </div>              
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">취소</button>     
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+    <!-- 필터 :: 인적 조건 -->
+    <div id="bottomSheet_2" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                인적 조건
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group mt0">
+                    <span for="ip-name" class="field-group__label">성별</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">전체</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">남자</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">여자</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span for="ip-name" class="field-group__label">연령대</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">10대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">20대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">30대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">40대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">50대</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">60대 이상</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">선택항목 초기화</button>  
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+    <!-- 필터 :: 과외 조건 -->
+    <div id="bottomSheet_3" class="bottom-sheet">
+        <div class="bottom-sheet__container">
+            <button type="button" class="bottom-sheet__close" data-dismiss="bottom-sheet"><i class="icon i-close"></i></button>
+            <div class="bottom-sheet__header">
+                과외 조건
+            </div>
+            <div class="bottom-sheet__body">
+                <div class="field-group mt0">
+                    <span for="ip-name" class="field-group__label">과외 방식</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">대면과외</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">화상과외</span>
+                                <input type="checkbox" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field-group">
+                    <span for="ip-name" class="field-group__label">시범 과외</span>
+                    <div class="field-group__cont field-group__cont--no-style">
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">무료</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">유료</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                        <div class="radiobox">
+                            <label class="radiobox__wrapper">
+                                <span class="radiobox__title radiobox__title--large">불가</span>
+                                <input type="radio" name="rd-group1" class="radiobox--hidden radiobox--primary">
+                                <div class="radiobox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                        
+            </div>
+            <div class="bottom-sheet__footer">
+                <button type="button" class="btn btn--full btn--gray" data-dismiss="bottom-sheet">선택항목 초기화</button>  
+                <button type="button" class="btn btn--full btn--primary" data-dismiss="bottom-sheet">저장하기</button>     
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dialog" class="modal-dialog">
+        <div id="modalWrapper" class="modal-dialog__wrapper">
+        </div>
+    </div>
+</div> 
+
+<script src="../assets/js/function.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var searchButton = document.querySelector('.fr-search');
+    var fieldGroup = document.querySelector('.field-group');
+
+    searchButton.addEventListener('click', function() {
+        if (fieldGroup.style.display === 'none' || fieldGroup.style.display === '') {
+            fieldGroup.style.display = 'block';
+            searchButton.classList.add('active');
+        } else {
+            fieldGroup.style.display = 'none';
+            searchButton.classList.remove('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
