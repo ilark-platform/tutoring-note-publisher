@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>선생님 회원가입</title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">선생님 회원가입</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container container--bg-white auth">
+            <main class="content pb0">
+                <div class="section pb16">
+                    <div class="field-group">
+                        <label for="" class="field-group__label">이메일</label>
+                        <div class="field-group__cont">
+                            <input type="email" name="" class="field-group__input" placeholder="이메일 주소를 입력해주세요">
+                            <span class="field-group__clear js-input-clear"></span>
+                        </div>
+                        <span class="field-group__help field-group__help--error">이메일을 올바른 형식으로 입력해주세요.</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="" class="field-group__label">비밀번호</label>
+                        <div class="field-group__cont">
+                            <input type="password" name="" id="password" class="field-group__input" placeholder="비밀번호를 입력해주세요">
+                            <span class="field-group__clear js-input-clear"></span>
+                            <button type="button" class="field-group__pwbtn js-pwToggle" onclick="pwShow(document.getElementById('password'), this)"><i class="icon i-visibility-off"></i></button>                            
+                        </div>
+                        <span class="field-group__help field-group__help--error">영문/숫자/특수문자 3가지 조합(8~20자)으로 입력해주세요.</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="" class="field-group__label">이름</label>
+                        <div class="field-group__cont">
+                            <input type="text" name="" class="field-group__input" placeholder="실명을 입력해주세요">
+                            <span class="field-group__clear js-input-clear"></span>
+                        </div>
+                        <span class="field-group__help field-group__help--error">필수 입력 항목입니다.</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="phone" class="field-group__label">휴대폰번호</label>
+                        <div class="field-group__cont">
+                            <input type="tel" name="phone" id="phone" class="field-group__input" pattern="[0-9]*" placeholder="숫자만 입력">
+                            <span class="field-group__clear js-input-clear"></span>
+                        </div>
+                        <span class="field-group__help field-group__help--error">휴대폰번호 형식이 잘못되었습니다.</span>
+                    </div>
+                    <div class="field-group">
+                        <button class="btn btn--full btn--brown" type="button">인증번호 요청</button>
+                        <span class="field-group__label typo-small2 mt4 mb2">인증번호</span>
+                        <div class="field-group__con">
+                            <input type="text" name="" class="field-group__input" style="background-color:#f9f9f9;" placeholder="6자리 입력">
+                        </div>
+                        <span class="field-group__help">인증번호는 발송 후 3분 이내에만 유효합니다.</span>
+                        <span class="field-group__help">인증 유효시간 <em class="color-red">2분 59초</em></span>
+                        <div class="divider divider--thin mt4" style="margin-left:0; margin-right:0;"></div>
+                        <span class="field-group__help"><i class="icon i-info mr1"></i>인증문자가 발송되지 않을 시 스팸으로 분류되어 있는지 확인바랍니다.</span>
+                    </div>
+
+                    <div class="divider divider--thin mt7" style="margin-left:0; margin-right:0;"></div>
+                    <div class="field-group">
+                        <div class="checkbox checkbox--pos-rel">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title checkbox__title--large">전체 동의</span>
+                                <input type="checkbox" name="agree_allcheck" value='selectall' class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox--pos-rel">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title">[필수] 만 14세 이상입니다</span>
+                                <input type="checkbox" name="agree" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox--pos-rel">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title">[필수] 이용약관 동의</span>
+                                <input type="checkbox" name="private1" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                            <button type="button" class="checkbox__link js-openModalBtn" data-url="../CM3/BB-1311.html">내용보기</button>
+                        </div>
+                        <div class="checkbox checkbox--pos-rel">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title">[필수] 개인정보 처리방침 동의</span>
+                                <input type="checkbox" name="private2" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                            <button type="button" class="checkbox__link js-openModalBtn" data-url="../CM3/BB-1312.html">내용보기</button>
+                        </div>
+                        <div class="checkbox checkbox--pos-rel">
+                            <label class="checkbox__wrapper">
+                                <span class="checkbox__title">[선택] 마케팅 정보 앱 푸시 알림 수신 동의</span>
+                                <input type="checkbox" name="marketing1" class="checkbox--hidden checkbox--primary">
+                                <div class="checkbox--show"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>              
+                <div class="content-footer">
+                    <button id="btn-submit" class="btn btn--full btn--primary is-disabled" type="button">가입하기</button>
+                </div>
+            </main>         
+        </div>
+    </div>
+
+    <div id="modal-dialog" class="modal-dialog">
+        <div id="modalWrapper" class="modal-dialog__wrapper">
+        </div>
+    </div>
+    
+</div> 
+
+<script src="../../assets/js/function.js"></script>
+<script>
+    /* 비밀번호 Show & Hide */
+    function pwShow(input, button) {
+        const icon = button.querySelector('i');
+        if (input.getAttribute("type") === "password") {
+            input.setAttribute("type", "text");
+            icon.classList.remove('i-visibility-off');
+            icon.classList.add('i-visibility-on');
+        } else {
+            input.setAttribute("type", "password");
+            icon.classList.remove('i-visibility-on');
+            icon.classList.add('i-visibility-off');
+        }
+    }
+</script>
+</body>
+</html>

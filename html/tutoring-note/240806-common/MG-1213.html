@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>내 정보 관리</title>
+    <link rel="stylesheet" href="../../assets/css/common.css?ver=111">
+</head>
+
+<body>
+<div id="app">
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <a href="javascript:window.history.back();" class="global-nav-bar__link"><i class="icon i-arrow-back"></i></a>
+            </div>
+            <div class="global-nav-bar__title">내 정보 관리</div>
+            <div class="global-nav-bar__control"></div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container mypage">
+            <main class="content">
+                <div class="section pb5">
+                    <div class="profile-group flex-box flex-box--items-center flex-box--justify-between flex-box--gap2">
+                        <div class="profile-group__head mb0">
+                            <div class="profile-group__label typo-small">이름</div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text profile-group__text--items-center">
+                                <div><p>김진수</p></div>
+                                <button class="btn btn--small btn--bordered-base ml3">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group flex-box flex-box--items-center flex-box--justify-between flex-box--gap2">
+                        <div class="profile-group__head mb0">
+                            <div class="profile-group__label typo-small">아이디(이메일)</div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text">
+                                <div><p>mentorim@naver.com</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group flex-box flex-box--items-center flex-box--justify-between flex-box--gap2">
+                        <div class="profile-group__head mb0">
+                            <div class="profile-group__label typo-small">휴대폰번호</div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="profile-group__text profile-group__text--items-center">
+                                <div><p>01012345678</p></div>
+                                <button class="btn btn--small btn--bordered-base ml3">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-group">
+                        <div class="profile-group__head">
+                            <div class="profile-group__label typo-small">휴대폰번호</div>
+                        </div>
+                        <div class="profile-group__cont">
+                            <div class="field-group flex-box flex-box--gap1 mt0">
+                                <label for="phone" class="field-group__label field-group__label--blind">휴대폰번호</label>
+                                <div class="field-group__cont">
+                                    <input type="tel" name="phone" id="phone" class="field-group__input" pattern="[0-9]*" placeholder="숫자만 입력">
+                                    <span class="field-group__clear js-input-clear"></span>
+                                </div>
+                                <button class="btn btn--gray mr2" type="button">취소</button>
+                            </div>
+                            <div class="field-group mt2">
+                                <span class="field-group__label field-group__label--blind">인증번호</span>
+                                <button class="btn btn--full btn--brown" type="button">인증번호 요청</button>
+                                <span class="field-group__help">휴대폰 인증 후 수정할 수 있습니다.</span>
+                                <div class="field-group__cont mt4">
+                                    <input type="text" name="" class="field-group__input" style="background-color:#f9f9f9;" placeholder="인증번호 입력">
+                                    <button class="btn btn--small btn--brown mr2" type="button">인증</button>
+                                </div>
+                                <span class="field-group__help">인증 유효시간 <em class="color-red">2분 59초</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="divider"></div>
+                <div class="section pb5">
+                    <div class="section__title typo-small">비밀번호 변경</div>
+                    <div class="field-group mt2">
+                        <label for="" class="field-group__label typo-small2 color-gray-700">새 비밀번호</label>
+                        <div class="field-group__cont">
+                            <input type="password" name="" id="password" class="field-group__input" placeholder="비밀번호를 입력해주세요">
+                            <span class="field-group__clear js-input-clear"></span>
+                            <button type="button" class="field-group__pwbtn js-pwToggle" onclick="pwShow(document.getElementById('password'), this)"><i class="icon i-visibility-off"></i></button>                            
+                        </div>
+                        <span class="field-group__help field-group__help--error">영문/숫자/특수문자 3가지 조합(8~20자)으로 입력해주세요.</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="" class="field-group__label typo-small2 color-gray-700">새 비밀번호 확인</label>
+                        <div class="field-group__cont">
+                            <input type="password" name="" id="password2" class="field-group__input" placeholder="비밀번호를 입력해주세요">
+                            <span class="field-group__clear js-input-clear"></span>
+                            <button type="button" class="field-group__pwbtn js-pwToggle" onclick="pwShow(document.getElementById('password2'), this)"><i class="icon i-visibility-off"></i></button>                            
+                        </div>
+                        <span class="field-group__help field-group__help--error">새 비밀번호와 새 비밀번호 확인의 번호가 일치하지 않습니다.</span>
+                    </div>
+                    <div class="field-group">
+                        <button class="btn btn--full btn--brown is-disabled" type="button">비밀번호 변경</button>
+                    </div>
+                </div>  
+                <div class="flex-box flex-box--items-center flex-box--justify-center pt8">
+                    <button class="text-btn text-btn--large text-btn--underline js-openModalBtn" data-url="MG-1311.html">회원 탈퇴 신청</button>    
+                </div>
+            </main>         
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 선생님
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 요청
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item global-bottom-nav__item--active">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+
+    <div id="modal-dialog" class="modal-dialog">
+        <div id="modalWrapper" class="modal-dialog__wrapper">
+        </div>
+    </div>
+</div> 
+
+<script src="../../assets/js/function.js"></script>
+<script>
+    /* 비밀번호 Show & Hide */
+    function pwShow(input, button) {
+        const icon = button.querySelector('i');
+        if (input.getAttribute("type") === "password") {
+            input.setAttribute("type", "text");
+            icon.classList.remove('i-visibility-off');
+            icon.classList.add('i-visibility-on');
+        } else {
+            input.setAttribute("type", "password");
+            icon.classList.remove('i-visibility-on');
+            icon.classList.add('i-visibility-off');
+        }
+    }
+</script>
+</body>
+</html>

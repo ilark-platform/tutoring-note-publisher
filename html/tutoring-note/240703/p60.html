@@ -55,7 +55,7 @@
                                 <label for="profile-photo-button"><i class="icon i-photo"></i></label>
                             </div>
                             <div class="profile-photo__image-preview">
-                                <img class="profile-photo__img" src="../assets/img/profile_default.jpg" alt="Profile Photo">
+                                <img class="profile-photo__img" src="../../assets/img/profile_default.jpg" alt="Profile Photo">
                             </div>
                             <button id="profile-del" class="profile-photo__del"><i class="icon i-close"></i></button>
                         </div>
@@ -536,7 +536,7 @@ const lg = lightGallery($lgContainer, {
         const imagePreview = document.querySelector('.profile-photo__img');
         const deleteButton = document.getElementById('profile-del');
         const label = document.querySelector('label[for="profile-photo-button"]');
-        const defaultImage = "../assets/img/profile_default.jpg";
+        const defaultImage = "../../assets/img/profile_default.jpg";
 
         inputFile.addEventListener('change', (event) => {
             const file = event.target.files[0];

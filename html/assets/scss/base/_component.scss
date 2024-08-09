@@ -43,41 +43,18 @@
 
 /* ------------------------------ Text Box ------------------------------ */
 .text-box {
+  width: 100%;
   
-  &.rounded {
-    padding: 2rem;
+  &--rounded {
+    padding: 1.25rem 1rem;
     background-color: $color-gray-100;
     border-radius: $border-radius;
-  }
-
-  p {
-    @include font-size(13, 16);
-    color: rgba($color-white, 0.6);
-
-    &.text-center {
-      text-align: center;
-    }
-
-    span {
-      display: inline-block;
-      color: $color-white;
-    }
-  }
-
-  a {
-    color: $color-primary;
-  }
-
-  b {
-    display: block;
-    @include font-size(15, 16, 500);
-    color: rgba($color-white, 0.9);
   }
 }
 
 
 
-.txttable {
+.text-table {
   color: rgba($color-white, 0.5);
 
   th {
@@ -192,7 +169,20 @@
     }
   }
 
+  &__pwbtn {
+    position: relative;
+    @include size(18px, 18px);
+    background-size: 12px 12px;
+    margin: .75rem .75rem .75rem .125rem;
+    z-index: 2; 
+
+    &.expanded {
+      color: $color-primary;
+    }
+  }
+
   &__clear {
+    position: relative;
     display: none;
     @include size(18px, 18px);
 		background-image: icon(close, 'ffffff');
@@ -202,6 +192,7 @@
     background-repeat: no-repeat;
     margin: .75rem;
     border-radius: 50%;
+    z-index: 2; 
   }
 
   &__input {
@@ -247,8 +238,8 @@
 
   &__help {
     display: block;
-    margin-top: .3125rem;
-    color: $color-gray-600;
+    margin-top: .5rem;
+    color: $color-gray-700;
     font-size: .8125rem;
     text-align: left;
 
@@ -259,8 +250,8 @@
 
   &__check-characters {
     display: block;
-    margin-top: .3125rem;
-    color: $color-gray-600;
+    margin-top: .5rem;
+    color: $color-gray-700;
     font-size: .8125rem;
     text-align: right;
 
@@ -701,6 +692,10 @@
 /* ------ CUSTOM CHECKBOX ----- */
 .checkbox {
 
+  &--pos-rel {
+    position: relative;
+  }
+
   & + & {
     margin-top: .75rem;
   }
@@ -733,8 +728,7 @@
 
   &__link {
     @include position(absolute, $top: 50%, $right: 0);
-    font-size: .875rem;
-    font-weight: 400;
+    font-size: .8125rem;
     color: $color-gray-600;
     padding: 0 5px;
     z-index: 2;
@@ -1488,7 +1482,251 @@
 
 
 /* ------------------------------ 게시판 ------------------------------ */
-// --- 리스트 ------------------------------------------------------------------
+// 리스트
+.board-list {
+  &__item {
+    position: relative;
+    border-bottom: .0625rem solid $color-gray-200;
+    background-color: $color-white;
+
+    &.notice {
+      .board-list__title {
+        font-weight: 700;
+        padding-left: 34px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 4px;
+          content: '';
+          width: 24px;
+          height: 18px;
+          font-size: .625rem;
+          line-height: 18px;
+          color: #fff;
+          text-align: center;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23ffffff' viewBox='0 -960 960 960'%3E%3Cpath d='M240-400v-160h136.92L520-703.08v446.16L376.92-400H240Zm390.77 52.31v-266.62q32.69 21 50.96 56.93Q700-521.46 700-480q0 41.46-18.27 76.38-18.27 34.93-50.96 55.93ZM480-606l-86 86H280v80h114l86 86v-252ZM380-480Z'/%3E%3C/svg%3E");
+          background-color: $color-gray-800;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 18px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: .75rem 2rem .75rem 0;
+    text-decoration: none;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: icon(arrow-right, 'b6b6b6');
+      background-size: 20px 20px;
+      background-position: 3px;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &--basic {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 1rem;
+    color: $color-black-100;
+
+    &--ellipsis {
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis;
+    }
+  }
+  &__date {
+    display: inline-block;
+    font-size: .8125rem;
+    color: $color-gray-700;
+    margin-top: .5rem;
+  }
+
+  & .button-dropdown {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    z-index: 3;
+  }
+}
+
+.board-list2 {
+  &__item {
+    border-bottom: .0625rem solid $color-gray-200;
+    background-color: $color-white;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+  &__link {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    padding: .75rem 0;
+    text-decoration: none;
+  }
+  &__pic  {
+    position: relative;
+    width: 48px;
+
+    &.is-new {
+      &::after {
+        position: absolute;
+        left: -.0625rem;
+        top: -.0625rem;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: $color-red;
+        border-radius: 50%;
+      }
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .icon.i-parents {
+      width: 48px;
+      height: 48px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='%23ffffff' viewBox='0 -960 960 960'%3E%3Cpath d='M247.85-260.62q51-36.69 108.23-58.03Q413.31-340 480-340t123.92 21.35q57.23 21.34 108.23 58.03 39.62-41 63.73-96.84Q800-413.31 800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 66.69 24.12 122.54 24.11 55.84 63.73 96.84ZM480-460q-50.54 0-85.27-34.73T360-580q0-50.54 34.73-85.27T480-700q50.54 0 85.27 34.73T600-580q0 50.54-34.73 85.27T480-460Zm0 340q-75.31 0-141-28.04t-114.31-76.65Q176.08-273.31 148.04-339 120-404.69 120-480t28.04-141q28.04-65.69 76.65-114.31 48.62-48.61 114.31-76.65Q404.69-840 480-840t141 28.04q65.69 28.04 114.31 76.65 48.61 48.62 76.65 114.31Q840-555.31 840-480t-28.04 141q-28.04 65.69-76.65 114.31-48.62 48.61-114.31 76.65Q555.31-120 480-120Z'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $color-gray-300;
+      border-radius: 50%;
+      border: 1px solid $color-gray-300;
+      overflow: hidden;
+    }
+
+    .icon.i-cscenter {
+      width: 48px;
+      height: 48px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='%23ffffff' viewBox='0 -960 960 960'%3E%3Cpath d='M480-104.61v-40.01h255.38q10.77 0 17.7-6.92 6.92-6.92 6.92-17.69V-200H636.92v-246.15H760V-520q0-116-82-198t-198-82q-116 0-198 82t-82 198v73.85h123.08V-200h-98.46q-27.62 0-46.12-18.5Q160-237 160-264.62V-520q0-66.31 25.04-124.5t68.65-101.81q43.62-43.61 101.81-68.65Q413.69-840 480-840t124.5 25.04q58.19 25.04 101.81 68.65 43.61 43.62 68.65 101.81Q800-586.31 800-520v350.77q0 27.61-18.5 46.11-18.5 18.51-46.12 18.51H480ZM224.62-240h58.46v-166.15H200v141.53q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92Zm452.3 0H760v-166.15h-83.08V-240Zm-452.3-166.15H200h83.08-58.46Zm452.3 0H760h-83.08Z'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $color-primary;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: .875rem;
+    color: $color-black-100;
+  }
+  &__date {
+    display: inline-block;
+    font-size: .75rem;
+    color: $color-gray-600;
+    margin-top: .5rem;
+  }
+  &__del {
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    bottom: 0;
+    width: 58px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-red;
+
+    & .icon.i-trash {
+      background-image: icon(trash, 'ffffff');
+    }
+
+  }
+}
+
+// 뷰
+.board-view {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -1rem;
+    padding: 1.25rem 1rem;
+    border-bottom: .0625rem solid $color-gray-300;
+    background-color: $color-gray-100;
+  }
+  &__title {
+    font-size: 1.063rem;
+    font-weight: 700;
+    color: $color-black-100;
+  }
+  &__date {
+    display: inline-block;
+    font-size: .8125rem;
+    color: $color-gray-700;
+    margin-top: .5rem;
+  }
+  &__body{
+    padding: 2rem 0;
+    font-size: .875rem;
+    color: $color-black-200;
+  }
+}
+
+// 관리자 답변
+.master-answer {
+  margin: 2rem -1rem 0 -1rem;
+  padding: 1.5rem 1rem;
+  background-color: rgba($color-primary, 0.03);
+  border-top: .0625rem solid rgba($color-primary, 0.2);
+
+  &__head {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-black-100;
+    padding-bottom: 1rem;
+    border-bottom: .0625rem solid $color-gray-300;
+  }
+  &__cont {
+    font-size: .875rem;
+    color: $color-black-200;
+    margin-top: 1rem;
+  }
+  &__date {
+    display: inline-block;
+    font-size: .8125rem;
+    color: $color-gray-700;
+    margin-top: .5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
 .table-box {
   border-top: 1px solid rgb(60, 60, 60);
 
