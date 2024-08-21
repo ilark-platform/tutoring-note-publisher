@@ -295,7 +295,7 @@
   } 
 
   &__item {
-    flex: 1 1 0;
+    //flex: 1 1 0;
     height: 100%;
     position: relative;
 
@@ -330,6 +330,7 @@
           position: relative;
           width: 1rem; 
           height: 1rem; 
+          white-space: nowrap;
         }
         span::after { 
           position: absolute; 
@@ -350,6 +351,7 @@
         span {
           position: relative;
           padding-right: .75rem;
+          white-space: nowrap;
         }
         span::after { 
           position: absolute; 
@@ -370,6 +372,7 @@
         span {
           position: relative;
           padding-right: .75rem;
+          white-space: nowrap;
         }
         span::after { 
           position: absolute; 
@@ -613,6 +616,10 @@
   color: $color-primary;
 }
 
+.highlight2 {
+  color: $color-purple;
+}
+
 .color-red {
   color: $color-red;
 }
@@ -646,11 +653,11 @@
 }
 
 .typo-small {
-  font-size: 0.875em !important;
+  font-size: 0.875rem !important;
 }
 
 .typo-small2 {
-  font-size: 0.8125em !important;
+  font-size: 0.8125rem !important;
 }
 
 .typo-medium {
@@ -658,7 +665,7 @@
 }
 
 .typo-medium2 {
-  font-size: 0.875rem !important;
+  font-size: 0.9375rem !important;
 }
 
 .typo-large {
@@ -701,6 +708,11 @@
   overflow: hidden;
 }
 
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 
 
@@ -962,9 +974,10 @@
 .tm-sm2 { position: relative; background: #f66217 url('../img/tm_sm1_img02.png') left 1rem center no-repeat; background-size: 62px 62px; padding-left: 6rem; }
 .tm-sm2::after { position: absolute; right: 1rem; top: 50%; content: ''; width: 24px; height: 24px; transform: translateY(-50%); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 -20 512 512'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='24' stroke-linecap='round' stroke-linejoin='round' d='M184 112l144 144-144 144'/%3E%3C/svg%3E"); }
 .tm-sm2 .tit { font-size: 1.063rem; font-weight: 700; line-height: 1.5rem; color: $color-white; }
-.tm-sm2 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-white; }
+.tm-sm2 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-white; word-break: keep-all; }
+.tm-sm3 .tit { font-size: 1.063rem; font-weight: 700; line-height: 1.5rem; color: $color-black-100; }
 .tm-sm3 { background: #fff url('../img/tm_sm1_img03.png') left 1rem center no-repeat; background-size: 62px 62px; padding-left: 6rem; }
-.tm-sm3 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-black-300; }
+.tm-sm3 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-black-300; word-break: keep-all; }
 
 
 /* ------------------------------ 파트너 선생님 메인 ------------------------------ */
@@ -977,8 +990,12 @@
 .pt-sm2 { position: relative; background: #6b5cd9 url('../img/pt_sm1_img02.png') left 1rem center no-repeat; background-size: 62px 62px; padding-left: 6rem; }
 .pt-sm2::after { position: absolute; right: 1rem; top: 50%; content: ''; width: 24px; height: 24px; transform: translateY(-50%); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 -20 512 512'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='24' stroke-linecap='round' stroke-linejoin='round' d='M184 112l144 144-144 144'/%3E%3C/svg%3E"); }
 .pt-sm2 .tit { font-size: 1.063rem; font-weight: 700; line-height: 1.5rem; color: $color-white; }
-.pt-sm2 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-white; }
-
+.pt-sm2 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-white; word-break: keep-all; }
+.pt-sm21 { position: relative; background: #6b5cd9 url('../img/pt_sm1_img02.png') left 1rem center no-repeat; background-size: 62px 62px; padding-left: 6rem; }
+.pt-sm21 .tit { font-size: 1.063rem; font-weight: 700; line-height: 1.5rem; color: $color-black-100;  }
+.pt-sm21 .desc { font-size: .875rem; line-height: 1.25rem; color: $color-black-300; word-break: keep-all; }
+.pt-sm21 .text-btn { color: $color-purple; }
+.pt-sm21 .text-btn .icon.i-arrow-right { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -20 512 512'%3E%3Cpath fill='none' stroke='%235c33f3' stroke-width='24' stroke-linecap='round' stroke-linejoin='round' d='M184 112l144 144-144 144'/%3E%3C/svg%3E"); }
 
 /* ------------------------------ 회원가입 :: 선생님 or 학부모 버튼 ------------------------------ */
 .auth-sel-btn { flex-direction: column; }

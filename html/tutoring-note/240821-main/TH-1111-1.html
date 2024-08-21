@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>선생님 홈</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <style>
+    .swiper-container { width: 100%; height: auto; padding-bottom: 1rem; overflow: hidden; }
+    .swiper-slide { display: flex; align-items: center; justify-content: center; width: 100%; }
+    .swiper-pagination { position: absolute; left: 50%; bottom: 6px; display: flex; align-items: center; justify-content: center; gap: .25rem; width: fit-content; height: 1.25rem; color: #fff; padding: 0 .625rem; background-color: #000; border-radius: 1.25rem; font-size: .625rem; line-height: 1; transform: translateX(-50%); }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div class="alarm mx0" style="position: relative;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="alarm__text">
+                        <p>시작/종료를 체크하지 않은 수업을 확인해주세요!</p>
+                        <div class="typo-medium ellipsis"><b>과외명 : 부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 김개똥, 이지나, 이종석</b></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="alarm__text">
+                        <p>시작/종료를 체크하지 않은 수업을 확인해주세요!</p>
+                        <div class="typo-medium ellipsis"><b>과외명 : 신도림<em class="dot"></em>수학<em class="dot"></em>박학생, 최영희, 홍길동</b></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <header id="app-header">
+        <div class="global-nav-bar">
+            <div class="global-nav-bar__button">
+                <img src="../../assets/img/symbol_hori.png" height="26">
+            </div>
+            <div class="global-nav-bar__title"></div>
+            <div class="global-nav-bar__control">
+                <a href="#" class="global-nav-bar__link"><i class="icon i-alarm is-new"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div id="app-body">
+        <div class="container">
+            <main class="content" style="padding-bottom: 74px;">
+                <div class="mt5">
+                    <div class="typo-large2"><span class="typo-medium">안녕하세요.</span><br> <b class="strong highlight">김멘토</b> 선생님!</div>
+                </div>
+                <div class="section-card mt4">
+                    <div class="flex-box flex-box--justify-between flex-box--items-center">
+                        <span class="typo-large strong">수업 달력</span>
+                        <i class="icon i-arrow-right"></i>
+                    </div>
+                    <div class="typo-small2 color-gray-900 my3">오늘의 일정</div>
+                    <div class="schedule-main">
+                        <ul class="schedule-main__group">
+                            <li class="schedule-main__item">
+                                <span class="schedule-main__line" style="background-color: #F48907;"></span>
+                                <div class="schedule-main__title">부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</div>
+                                <div class="schedule-main__time">오후 3:00 ~ 오후 4:00</div>
+                            </li>
+                            <li class="schedule-main__item">
+                                <span class="schedule-main__line" style="background-color: #B21DCD;"></span>
+                                <div class="schedule-main__title">삼산동<em class="dot"></em>영어, 국어<em class="dot"></em>김진수</div>
+                                <div class="schedule-main__time">오후 3:00 ~ 오후 4:00</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-card mt4">
+                    <div class="flex-box flex-box--justify-between flex-box--items-center">
+                        <span class="typo-large strong">진행중 과외</span>
+                        <i class="icon i-arrow-right"></i>
+                    </div>
+                    <div class="typo-small2 color-gray-900 my3">수업 완료 후 보고서를 작성해보세요.</div>
+                    <div class="schedule-main2">
+                        <ul class="schedule-main2__group">
+                            <li class="schedule-main2__item">
+                                <div class="schedule-main2__title">[2차] 부개동<em class="dot"></em>영어<em class="dot"></em>김학생, 김개똥, 이지나, 이종석, 이한나</div>
+                                <div class="schedule-main2__bg" style="background-color: #53708C;"></div>
+                            </li>
+                            <li class="schedule-main2__item">
+                                <div class="schedule-main2__title">[3차] 삼산동<em class="dot"></em>영어, 국어<em class="dot"></em>김진수</div>
+                                <div class="schedule-main2__bg" style="background-color: #058E8E;"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-card mt4">
+                    <div class="flex-box flex-box--justify-between flex-box--items-center">
+                        <span class="typo-large strong">파트너 사업자 요청</span>
+                    </div>
+                    <div class="typo-small2 color-gray-900 my3">요청을 확인하고 승인해주세요.</div>
+                    <div class="summary-main">
+                        <ul class="summary-main__group">
+                            <li class="summary-main__item">
+                                <div class="summary-main__title">새로운 과외 요청</div>
+                                <div class="summary-main__cont">
+                                    <span class="summary-main__link"><em class="strong highlight mr1">10</em> 건</span>
+                                </div>
+                            </li>
+                            <li class="summary-main__item">
+                                <div class="summary-main__title">새로운 파트너 요청</div>
+                                <div class="summary-main__cont">
+                                    <span class="summary-main__link"><em class="strong highlight mr1">0</em> 건</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-card notice-main mt4">
+                    <div class="notice-main__item">과외노트 오픈! 과외노트 오픈! 과외노트 오픈! 과외노트 오픈!</div>
+                </div>
+                <div class="section-card tm-sm3 mt4" style="background-color: rgba(246,98,23,0.1);">
+                    <div class="tit mb1">프로필 작성 하셨나요?</div>
+                    <p class="desc">프로필을 완성하면 별도로 저장하거나 출력할 필요 없이 알림톡으로 전송할 수 있어요!</p>
+                    <span class="text-btn">프로필 작성하기 <i class="icon i-arrow-right"></i></span>
+                </div>  
+            </main> 
+        </div>
+    </div>
+
+    <footer id="app-footer">
+        <nav class="global-bottom-nav">
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-tutoring"></i>
+                    과외 관리
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">		
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-schedule"></i>
+                    수업 달력
+                </div>
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-partner"></i>
+                    파트너 사업자
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-profile"></i>
+                    프로필
+                </div>		
+            </div>
+            <div class="global-bottom-nav__item">
+                <div class="global-bottom-nav__item-content">
+                    <i class="icon i-ft-my"></i>
+                    내 정보
+                </div>		
+            </div>
+        </nav>
+    </footer>
+</div> 
+
+<script src="../../assets/js/function.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoHeight: true, // 높이 자동 조정
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+    });
+</script>
+</body>
+</html>
