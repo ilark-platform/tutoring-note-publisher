@@ -1544,6 +1544,26 @@
   }
 }
 
+@media screen and (min-width: 1281px) {
+  .regi-image {
+   
+    &__list {
+      flex-wrap: wrap;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: none;
+      scroll-snap-type: none;
+    }
+  
+    &__item {
+      flex-shrink: 0;
+      display: flex;
+      position: relative;
+      width: calc(((100% - 2rem) / 3));
+    }
+    
+  }
+}
+
 .certificate-preview {
   padding: 1rem;
   border: .0625rem solid $color-gray-300;

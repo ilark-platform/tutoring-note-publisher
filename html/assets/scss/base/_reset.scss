@@ -43,6 +43,15 @@ body {
 body.overflow-hidden {
   overflow: hidden;
 }
+@media screen and (min-width: 1281px) {
+  html {
+    background-color: #f9f9f9;
+  }
+  body {
+    max-width: 640px;    
+  }
+}
+
 ul {
   list-style: none;
 }
