@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>학부모 튜토리얼</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <style>
+    .swiper-container { flex-grow: 1; width: 100%; overflow: hidden; }
+    .swiper-wrapper { height: 100% !important; }
+    .swiper-slide { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+    .swiper-pagination { position: absolute; left: 50%; bottom: 82px; display: flex; align-items: center; justify-content: center; gap: .25rem; width: fit-content; height: 1.25rem; color: #fff; padding: 0 .625rem; background-color: #787878; border-radius: 1.25rem; font-size: .625rem; line-height: 1; transform: translateX(-50%); }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div id="app-body">
+        <div class="container container--bg-white auth px0">
+            <main class="content pb0">
+                <div class="section flex-box px0 mx0" style="border-top: none;">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div style="width:100%;">
+                                    <div class="typo-large3 strong text-center mt2">오늘의 수업 일정</div>
+                                    <div class="typo-medium color-black-400 text-center mt2">
+                                        과외별로 오늘의 수업 일정을<br> 한 눈에 확인할 수 있어요
+                                    </div>
+                                    <div class="mt5">
+                                        <img src="../assets/img/tutorials/tutorials_pp01.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="width:100%;">
+                                    <div class="typo-large3 strong text-center mt2">내 과외 현황</div>
+                                    <div class="typo-medium color-black-400 text-center mt2">
+                                        진행중 또는 종료된 과외의 일정을<br> 확인할 수 있어요
+                                    </div>
+                                    <div class="mt5">
+                                        <img src="../assets/img/tutorials/tutorials_pp02.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div style="width:100%;">
+                                    <div class="typo-large3 strong text-center mt2">과외 사업자 정보 제공</div>
+                                    <div class="typo-medium color-black-400 text-center mt2">
+                                        과외노트에 가입된 과외 사업자<br> 목록을 제공해드려요
+                                    </div>
+                                    <div class="mt5">
+                                        <img src="../assets/img/tutorials/tutorials_pp03.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>              
+                <div class="content-footer content-footer--transparent mx0">
+                    <button id="btn-submit" class="btn btn--full btn--primary" type="button">시작하기</button>
+                </div>
+            </main>         
+        </div>
+    </div>
+</div> 
+
+<script src="../../assets/js/function.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoHeight: false, // 높이 자동 조정
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+    });
+</script>
+</body>
+</html>
